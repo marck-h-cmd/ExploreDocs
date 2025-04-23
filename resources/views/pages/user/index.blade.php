@@ -105,6 +105,14 @@
             right: -1rem;
         }
     }
+
+    .btn {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
 </style>
 
 <div class="mb-5">
@@ -118,7 +126,7 @@
 
         <div class="container row justify-content-center mt-4">
             <form>
-                <div class="row g-2">
+                <div class="row g-5 justify-content-center">
                     <div class="col-sm-2">
                         <select class="form-select">
                             <option selected>Todo</option>
@@ -130,8 +138,8 @@
                     <div class="col-sm-8">
                         <input type="text" class="form-control" placeholder="Buscar...">
                     </div>
-                    <div class="col-sm-2">
-                        <x-button text="🔍 Buscar" color="btn-secondary" class="w-100" />
+                    <div class="col-sm-1">
+                        <x-button icon="bi bi-search" color="btn-light"/>
                     </div>
                 </div>
             </form>
@@ -149,24 +157,24 @@
 
             <div class="container row row-cols-1 row-cols-md-3 g-4">
                 <x-card
-                    img="ruta_de_imagen_1.jpg"
+                    img="/images/autor01.png"
                     alt="Autor 1"
-                    title="Nombre del Autor 1"
-                    description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
+                    title="Mario Vargas LLosa"
+                    description="Premio Nobel de Literatura, autor de obras como 'La ciudad y los perros'."
                     href="#" />
 
                 <x-card
-                    img="ruta_de_imagen_1.jpg"
+                    img="/images/autor02.webp"
                     alt="Autor 2"
-                    title="Nombre del Autor 2"
-                    description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
+                    title="J. R. R. Tolkien"
+                    description="Autor de obras como 'El Seno de los Anillos' y 'El Hobbit'."
                     href="#" />
 
                 <x-card
-                    img="ruta_de_imagen_1.jpg"
+                    img="/images/autor03.webp"
                     alt="Autor 3"
-                    title="Nombre del Autor 3"
-                    description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
+                    title="Octavio Paz"
+                    description="Premio Nobel de Literatura, autor de obras como 'El olvido'."
                     href="#" />
             </div>
         </div>
@@ -176,30 +184,40 @@
 
             <div class="container row row-cols-1 row-cols-md-3 g-4">
                 <x-card
-                    img="ruta.jpg"
+                    img="images/titulo01.webp"
                     alt="Imagen del artículo"
-                    title="Título"
-                    description="Descripción del contenido."
+                    title="Tu sueño imperios han sido"
+                    description="Álvaro Enrigue narra el histórico encuentro entre Cortés y Moctezuma el 8 de noviembre de 1519, 
+                        un choque entre dos mundos y visiones opuestas. Su novela mezcla historia y ficción para explorar qué ocurrió realmente y 
+                        cómo pudo haberse interpretado.La obra está cargada de misterio, violencia y ambición imperial. 
+                        Publicada por Anagrama, ha sido destacada por Karla Martínez de Salas de Vogue México y Latinoamérica."
                     href="#"
                     btnText="Leer más"
                     btnColor="btn-warning"
                     btnIcon="bi bi-arrow-right-circle" />
 
                 <x-card
-                    img="ruta.jpg"
+                    img="images/titulo02.webp"
                     alt="Imagen del artículo"
-                    title="Título"
-                    description="Descripción del contenido."
+                    title="La última casa"
+                    description="Arantxa Urretabizkaia aborda la vejez con originalidad, lejos de los 
+                        clichés, y ganó el premio Euskadi con su versión en euskera. La novela mezcla misterio, 
+                        recuerdos y decisiones pasadas mientras una mujer busca su refugio final en Hendaya. 
+                        En un entorno lleno de secretos, vecinos vigilantes y fantasmas del pasado, 
+                        se construye una historia íntima y única."
                     href="#"
                     btnText="Leer más"
                     btnColor="btn-warning"
                     btnIcon="bi bi-arrow-right-circle" />
 
                 <x-card
-                    img="ruta.jpg"
+                    img="images/titulo03.webp"
                     alt="Imagen del artículo"
-                    title="Título"
-                    description="Descripción del contenido."
+                    title="Silencios que matan"
+                    description="Silencios que matan, de Jordan Harper, es una novela negra intensa y premiada, 
+                        ambientada en una Los Ángeles brutal y luminosa. Ganadora del premio Ian Fleming Steel 
+                        Dagger, fue destacada por medios como The New York Times y The Guardian. 
+                        Con un estilo que mezcla crudeza y poesía, ofrece una mirada feroz y emotiva a los contrastes urbanos."
                     href="#"
                     btnText="Leer más"
                     btnColor="btn-warning"
@@ -237,7 +255,7 @@
         </div>
 
         <div class="container-fluid mt-5">
-            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Conferéncias</h3>
+            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Conferencias</h3>
 
             <div class="container row row-cols-1 row-cols-md-3 g-4">
                 <x-card-conference
