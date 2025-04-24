@@ -13,7 +13,7 @@
         background-attachment: scroll;
         background-size: cover;
         position: relative;
-        z-index: 1;
+        z-index: 0;
     }
 
     .bg-hero::after {
@@ -228,7 +228,7 @@
         <div class="container-fluid my-5">
             <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Títulos Recientemente Subidos</h3>
 
-            <div id="splide" class="splide mx-auto mb-5 text-center">
+            <div id="splide" class="splide mx-auto mb-5 text-center z-0">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
@@ -283,8 +283,116 @@
                     moreUrl="#" />
             </div>
         </div>
+
+        <div class="container-fluid contact">
+
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="display-4 text-center">Contactanos</h4>
+                    <hr class="my-4">
+                </div>
+        
+                <div class="col-xs-12 col-md-6 " id="contact">
+        
+                    <form class="mb-sm-4" id="for">
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlInput2">Nombre</label>
+                            <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="User Name">
+                        </div>
+        
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email </label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+        
+                        <button type="submit" class="btn btn-info submit-form">Submit</button>
+                    </form>
+        
+                </div>
+        
+                <div class="col-xs-12 col-md-6" id="contact">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.410276127892!2d-79.04060262589138!3d-8.115327781204812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9fb3467261%3A0x752547ad9a204df6!2sUniversidad%20Nacional%20de%20Trujillo%20(UNT)!5e1!3m2!1ses-419!2spe!4v1734127574943!5m2!1ses-419!2spe"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        
+                </div>
+        
+        
+            </div>
+            <div class="row my-4">
+                <div class="col-lg-12">
+                    <div class=" mt-4 border-0 mb-4">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                          <div class="card-body d-flex align-items-center gap-3 c-detail pl-0">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Address</h6>
+                              <p class="">601 Sherwood Ave.
+                                <br> San Pablo</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center" >
+                          <div class="card-body d-flex align-items-center gap-3 c-detail">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Phone</h6>
+                              <p class="">951 546 944
+                                <br> 630 446 8851</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                          <div class="card-body d-flex align-items-center gap-3 c-detail">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Email</h6>
+                              <p class="">
+                                info@gmail.com
+                                <br> 123@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        
+        </div>
     </div>
 </div>
+<style>
+    .contact{
+  padding: 5% 10%;
+}
+
+.submit-form{
+    margin: 5% 3% 5% 0;
+    color: #f8f9fa;
+}
+
+.form-group{
+    margin-top: 4px;
+}
+
+
+</style>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
