@@ -104,6 +104,12 @@
         .splide__arrow--next {
             right: -1rem;
         }
+
+        form .form-select,
+        form .form-control {
+            font-size: 0.9rem;
+            padding: 0.5rem;
+        }
     }
 
     .btn {
@@ -125,9 +131,9 @@
         </p>
 
         <div class="container row justify-content-center mt-4">
-            <form>
-                <div class="row g-5 justify-content-center">
-                    <div class="col-sm-2">
+            <form class="col-12 col-md-8">
+                <div class="row g-2">
+                    <div class="col-12 col-md-3">
                         <select class="form-select">
                             <option selected>Todo</option>
                             <option>Artículos</option>
@@ -135,19 +141,19 @@
                             <option>Temas</option>
                         </select>
                     </div>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" placeholder="Buscar...">
-                    </div>
-                    <div class="col-sm-1">
-                        <x-button icon="bi bi-search" color="btn-light"/>
+                    <div class="col-12 col-md-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control border border-dark" placeholder="Buscar...">
+                            <x-button icon="bi bi-search" color="btn-info" />
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
 
-        <div class="mt-4 d-flex justify-content-center gap-3">
-            <a href="#" class="btn btn-dark">BÚSQUEDA AVANZADA</a>
-            <a href="#" class="btn btn-dark">TEMAS POPULARES</a>
+        <div class="  mt-4 d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-info">BÚSQUEDA AVANZADA</a>
+            <a href="#" class="btn btn-info">TEMAS POPULARES</a>
         </div>
     </div>
     <div class="section-content">
@@ -156,31 +162,31 @@
             <h3 class=" container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Autores más destacados</h3>
 
             <div class="container row row-cols-1 row-cols-md-3 g-4">
-                <x-card
-                    img="/images/autor01.png"
-                    alt="Autor 1"
-                    title="Mario Vargas LLosa"
+                <x-card-autor
+                    name="Mario Vargas Llosa"
+                    country="Perú"
+                    avatar="/images/autor01.png"
                     description="Premio Nobel de Literatura, autor de obras como 'La ciudad y los perros'."
-                    href="#" />
+                    moreUrl="#" />
 
-                <x-card
-                    img="/images/autor02.webp"
-                    alt="Autor 2"
-                    title="J. R. R. Tolkien"
-                    description="Autor de obras como 'El Seno de los Anillos' y 'El Hobbit'."
-                    href="#" />
-
-                <x-card
-                    img="/images/autor03.webp"
-                    alt="Autor 3"
-                    title="Octavio Paz"
+                <x-card-autor
+                    name="Octavio Paz"
+                    country="Mexico"
+                    avatar="/images/autor03.webp"
                     description="Premio Nobel de Literatura, autor de obras como 'El olvido'."
-                    href="#" />
+                    moreUrl="#" />
+
+                <x-card-autor
+                    name="J. R. R. Tolkien"
+                    country="Inglaterra"
+                    avatar="/images/autor02.webp"
+                    description="Autor de obras como 'El Seno de los Anillos' y 'El Hobbit'"
+                    moreUrl="#" />
             </div>
         </div>
 
         <div class="container-fluid mt-5">
-            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Titulos populares</h3>
+            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Títulos populares</h3>
 
             <div class="container row row-cols-1 row-cols-md-3 g-4">
                 <x-card
@@ -291,107 +297,107 @@
                     <h4 class="display-4 text-center">Contactanos</h4>
                     <hr class="my-4">
                 </div>
-        
+
                 <div class="col-xs-12 col-md-6 " id="contact">
-        
+
                     <form class="mb-sm-4" id="for">
-        
+
                         <div class="form-group">
                             <label for="exampleFormControlInput2">Nombre</label>
                             <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="User Name">
                         </div>
-        
-        
+
+
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email </label>
                             <input type="email" class="form-control" id="exampleFormControlInput1"
                                 placeholder="name@example.com">
                         </div>
-        
+
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Message</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-        
+
                         <button type="submit" class="btn btn-info submit-form">Submit</button>
                     </form>
-        
+
                 </div>
-        
+
                 <div class="col-xs-12 col-md-6" id="contact">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.410276127892!2d-79.04060262589138!3d-8.115327781204812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9fb3467261%3A0x752547ad9a204df6!2sUniversidad%20Nacional%20de%20Trujillo%20(UNT)!5e1!3m2!1ses-419!2spe!4v1734127574943!5m2!1ses-419!2spe"
                         width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-        
+
                 </div>
-        
-        
+
+
             </div>
             <div class="row my-4">
                 <div class="col-lg-12">
                     <div class=" mt-4 border-0 mb-4">
-                      <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
-                          <div class="card-body d-flex align-items-center gap-3 c-detail pl-0">
-                            <div class="mr-3 align-self-center">
-                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card-body d-flex align-items-center gap-3 c-detail pl-0">
+                                    <div class="mr-3 align-self-center">
+                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Address</h6>
+                                        <p class="">601 Sherwood Ave.
+                                            <br> San Pablo
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                              <h6 class="font-weight-medium">Address</h6>
-                              <p class="">601 Sherwood Ave.
-                                <br> San Pablo</p>
+                            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card-body d-flex align-items-center gap-3 c-detail">
+                                    <div class="mr-3 align-self-center">
+                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Phone</h6>
+                                        <p class="">951 546 944
+                                            <br> 630 446 8851
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
+                            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                                <div class="card-body d-flex align-items-center gap-3 c-detail">
+                                    <div class="mr-3 align-self-center">
+                                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Email</h6>
+                                        <p class="">
+                                            info@gmail.com
+                                            <br> 123@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center" >
-                          <div class="card-body d-flex align-items-center gap-3 c-detail">
-                            <div class="mr-3 align-self-center">
-                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
-                            </div>
-                            <div class="">
-                              <h6 class="font-weight-medium">Phone</h6>
-                              <p class="">951 546 944
-                                <br> 630 446 8851</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
-                          <div class="card-body d-flex align-items-center gap-3 c-detail">
-                            <div class="mr-3 align-self-center">
-                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
-                            </div>
-                            <div class="">
-                              <h6 class="font-weight-medium">Email</h6>
-                              <p class="">
-                                info@gmail.com
-                                <br> 123@gmail.com
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
             </div>
-        
+
         </div>
     </div>
 </div>
 <style>
-    .contact{
-  padding: 5% 10%;
-}
+    .contact {
+        padding: 5% 10%;
+    }
 
-.submit-form{
-    margin: 5% 3% 5% 0;
-    color: #f8f9fa;
-}
+    .submit-form {
+        margin: 5% 3% 5% 0;
+        color: #f8f9fa;
+    }
 
-.form-group{
-    margin-top: 4px;
-}
-
-
+    .form-group {
+        margin-top: 4px;
+    }
 </style>
 
 <script>
