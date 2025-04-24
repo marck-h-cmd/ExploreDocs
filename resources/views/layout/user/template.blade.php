@@ -6,69 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <!--<link href="https://fonts.googleapis.com/css?family=Glass+Antiqua" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <!--Bootstrap MCDN-->
     <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 
 </head>
 
 <body>
-      <!-- Nav -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" id="eenavbar">
-        <div class="container ">
-          <!-- Logo -->
-          <a class="navbar-brand" href="#">
-            <img src="eelogo5.png" alt="Logoimg" class="img-fluid Logoimg" height="40">
-          </a>
-      
-          <!-- Hamburger Button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Collapsible Navigation -->
-          <div class="collapse navbar-collapse eenavbar" id="myNavbar">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-      
-              <!-- Browse Dropdown -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="browseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Browse
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="browseDropdown">
-                  <li><a class="dropdown-item" href="ee-landmarks-en.html">Landmarks</a></li>
-                  <li><a class="dropdown-item" href="ee-spirtual-en.html">Spiritual</a></li>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/images/logo.png" alt="Logoimg" class=" Logoimg" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Browse
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Libros</a></li>
+                            <li><a class="dropdown-item" href="#">Tesis</a></li>
+                            <li><a class="dropdown-item" href="#">Papers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Popular</a></li>
+                            <li><a class="dropdown-item" href="#">Reciente</a></li>
+                            <li><a class="dropdown-item" href="#">Más Valorado</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-      
-              <!-- Explore Dropdown -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Explore
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                  <li><a class="dropdown-item" href="#">Adventure</a></li>
-                  <li><a class="dropdown-item" href="#">Sport</a></li>
-                </ul>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
 
 
@@ -76,36 +70,100 @@
         @yield('content')
     </main>
 
-    <footer>
-        <div id="contactfoot">
-            <h3 class="footinfo">Contact Us:</h3>
-            <p class="footinfo"> Via Phone:
-                <br>01151537797
-                <br>01143214535
-                <br>
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there 👋<br />How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+    </div>
 
-            </p>
-            <h3>Email Us:</h3>
+    <footer class="mt-auto d-flex justify-content-center bg-dark text-white pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Información de la empresa -->
+                <div class="col-md-3 mb-3">
+                    <h5>Sobre Nosotros</h5>
+                    <p>Somos un sitio dedicado a ofrecerte los mejores libros y publicaciones en todo el país.</p>
+                </div>
+
+                <!-- Enlaces rápidos -->
+                <div class="col-md-3 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">
+                                <i class="bi bi-house"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">
+                                <i class="bi bi-info-circle"></i> Nosotros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">
+                                <i class="bi bi-envelope"></i> Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="col-md-3 mb-3">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill"></i> Av.San Pabl0, Springfield</li>
+                        <li><i class="bi bi-telephone-fill"></i> +51 911 123 568</li>
+                        <li><i class="bi bi-envelope-fill"></i> soporteExplore@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="col-md-3 mb-3">
+                    <h5>Síguenos</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/tu_pagina"
+                                class="text-white"><i class="bi bi-facebook fs-4"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/tu_cuenta" class="text-white"><i
+                                    class="bi bi-twitter fs-4"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/tu_cuenta"
+                                class="text-white"><i class="bi bi-instagram fs-4"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/tu_empresa"
+                                class="text-white"><i class="bi bi-linkedin fs-4"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="bg-light">
+
+            <!-- Derechos de autor -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2025 ExploreDocs. Todos los derechos reservados.</p>
+                </div>
+            </div>
         </div>
-        <div id="Addressfoot">
-            <h3 class="footinfo">Address</h3>
-            56, Mohammed Mokaled street<br>
-            8th district, nasrcity,<br>
-            Cairo, Egypt.
-        </div>
-        <div id="followfoot">
-            <h3>Follow us:</h3>
-            <img src="tw.png" alt="tw">
-            <img src="fb.png" alt="fb">
-            <img src="rss.png" alt="rss">
-            <br>
-            <a href="" class="pfoot">Click for Site Map</a>
-        </div>
-        <h4>© 2025 Group-21.ICS-BUE, All rights reserved.</h4>
     </footer>
 
-   
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 
 
@@ -115,9 +173,6 @@
 
 
 <style>
-    /*universal*/
-
-
     /*NavBar*/
     #eenavbar {
         background-color: #F9F8EB;
@@ -136,7 +191,7 @@
 
     nav li a:hover {
         color: black !important;
-        background-color: #FFE1B6 !important;
+        background-color: #56e2d7 !important;
     }
 
     .selectedee {
@@ -403,4 +458,318 @@
     #covnav {
         text-align: center;
     }
+
+    /* CHATBOT */
+
+    .chatbot-toggler {
+        position: fixed;
+        bottom: 30px;
+        right: 35px;
+        outline: none;
+        border: none;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #1dd0e7;
+        transition: all 0.2s ease;
+    }
+
+    body.show-chatbot .chatbot-toggler {
+        transform: rotate(90deg);
+    }
+
+    .chatbot-toggler span {
+        color: #fff;
+        position: absolute;
+    }
+
+    .chatbot-toggler span:last-child,
+    body.show-chatbot .chatbot-toggler span:first-child {
+        opacity: 0;
+    }
+
+    body.show-chatbot .chatbot-toggler span:last-child {
+        opacity: 1;
+    }
+
+    .chatbot {
+        position: fixed;
+        right: 35px;
+        bottom: 90px;
+        width: 420px;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.5);
+        transform-origin: bottom right;
+        box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+            0 32px 64px -48px rgba(0, 0, 0, 0.5);
+        transition: all 0.1s ease;
+    }
+
+    body.show-chatbot .chatbot {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
+
+    .chatbot header {
+        padding: 16px 0;
+        position: relative;
+        text-align: center;
+        color: #fff;
+        background: #1dd0e7;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chatbot header span {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        display: none;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+    header h2 {
+        font-size: 1.4rem;
+    }
+
+    .chatbot .chatbox {
+        overflow-y: auto;
+        height: 510px;
+        padding: 30px 20px 100px;
+    }
+
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 25px;
+    }
+
+    .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 25px;
+    }
+
+    .chatbox .chat {
+        display: flex;
+        list-style: none;
+    }
+
+    .chatbox .outgoing {
+        margin: 20px 0;
+        justify-content: flex-end;
+    }
+
+    .chatbox .incoming span {
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        cursor: default;
+        text-align: center;
+        line-height: 32px;
+        align-self: flex-end;
+        background: #1dd0e7;
+        border-radius: 4px;
+        margin: 0 10px 7px 0;
+    }
+
+    .chatbox .chat p {
+        white-space: pre-wrap;
+        padding: 12px 16px;
+        border-radius: 10px 10px 0 10px;
+        max-width: 75%;
+        color: #fff;
+        font-size: 0.95rem;
+        background: #1dd0e7;
+    }
+
+    .chatbox .incoming p {
+        border-radius: 10px 10px 10px 0;
+    }
+
+    .chatbox .chat p.error {
+        color: #721c24;
+        background: #f8d7da;
+    }
+
+    .chatbox .incoming p {
+        color: #000;
+        background: #f2f2f2;
+    }
+
+    .chatbot .chat-input {
+        display: flex;
+        gap: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        padding: 3px 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    .chat-input textarea {
+        height: 55px;
+        width: 100%;
+        border: none;
+        outline: none;
+        resize: none;
+        max-height: 180px;
+        padding: 15px 15px 15px 0;
+        font-size: 0.95rem;
+    }
+
+    .chat-input span {
+        align-self: flex-end;
+        color: #1dd0e7;
+        cursor: pointer;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+        font-size: 1.35rem;
+    }
+
+    .chat-input textarea:valid~span {
+        visibility: visible;
+    }
+
+    @media (max-width: 490px) {
+        .chatbot-toggler {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .chatbot {
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        .chatbot .chatbox {
+            height: 90%;
+            padding: 25px 15px 100px;
+        }
+
+        .chatbot .chat-input {
+            padding: 5px 15px;
+        }
+
+        .chatbot header span {
+            display: block;
+        }
+    }
 </style>
+
+
+<script>
+    const chatbotToggler = document.querySelector(".chatbot-toggler");
+    const closeBtn = document.querySelector(".close-btn");
+    const chatbox = document.querySelector(".chatbox");
+    const chatInput = document.querySelector(".chat-input textarea");
+    const sendChatBtn = document.querySelector(".chat-input span");
+
+    let userMessage = null;
+    const inputInitHeight = chatInput.scrollHeight;
+
+    // API configuration
+    const API_KEY = ""; // Your API key here
+    const API_URL = `https://openrouter.ai/api/v1/chat/completions`;
+    const MODEL = 'meta-llama/llama-3.3-70b-instruct:free'
+    const createChatLi = (message, className) => {
+        // Create a chat <li> element with passed message and className
+        const chatLi = document.createElement("li");
+        chatLi.classList.add("chat", `${className}`);
+        let chatContent = className === "outgoing" ? `<p></p>` :
+            `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+        chatLi.innerHTML = chatContent;
+        chatLi.querySelector("p").textContent = message;
+        return chatLi;
+    };
+
+    const generateResponse = async (chatElement) => {
+        const messageElement = chatElement.querySelector("p");
+        console.log('user', userMessage)
+
+        // Define the properties and message for the API request
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                'Authorization': `Bearer ${API_KEY}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                model: MODEL,
+                messages: [{
+                    role: "user",
+                    content: userMessage,
+                }, ],
+            }),
+        };
+
+        // Send POST request to API, get response and set the reponse as paragraph text
+        try {
+            const response = await fetch(API_URL, requestOptions);
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error.message);
+
+            // Get the API response text and update the message element
+            messageElement.textContent = data.choices[0].message.content;
+        } catch (error) {
+            // Handle error
+            messageElement.classList.add("error");
+            messageElement.textContent = error.message;
+        } finally {
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+        }
+    };
+
+    const handleChat = () => {
+        userMessage = chatInput.value.trim();
+        if (!userMessage) return;
+
+
+        chatInput.value = "";
+        chatInput.style.height = `${inputInitHeight}px`;
+        chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+
+        setTimeout(() => {
+            // Display "Thinking..." message while waiting for the response
+            const incomingChatLi = createChatLi("Thinking...", "incoming");
+            chatbox.appendChild(incomingChatLi);
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+            generateResponse(incomingChatLi);
+        }, 600);
+    };
+
+    chatInput.addEventListener("input", () => {
+        // Adjust the height of the input textarea based on its content
+        chatInput.style.height = `${inputInitHeight}px`;
+        chatInput.style.height = `${chatInput.scrollHeight}px`;
+    });
+
+    chatInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+            e.preventDefault();
+            handleChat();
+        }
+    });
+
+    sendChatBtn.addEventListener("click", handleChat);
+    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+</script>

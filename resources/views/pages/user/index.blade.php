@@ -5,15 +5,31 @@
 @section('content')
 
 <style>
-    .bg-radial-hero {
-        background: radial-gradient(circle at center, #ffcc99, #ffb347);
+    .bg-hero {
         padding: 100px 0;
         color: #fff;
-        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background: url('/images/fondo05.jpg') no-repeat center center/cover;
+        background-attachment: scroll;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+    }
+
+    .bg-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Oscurece la imagen */
+        z-index: -1;
     }
 
     @media (max-width: 768px) {
-        .bg-radial-hero {
+        .bg-hero {
             padding: 60px 0;
         }
     }
@@ -22,169 +38,382 @@
         transform: scale(1.02);
         transition: transform 0.3s ease;
     }
+
+    .section-content {
+        background-color: #f8f9fa;
+        /* Blanco o gris claro */
+        padding: 60px 0;
+    }
+
+    .book-cover {
+        width: 140px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .book-cover:hover {
+        transform: scale(1.05);
+    }
+
+    .carousel-inner {
+        padding: px 0;
+    }
+
+    #splide {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .splide__arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #ffffffcc;
+        /* blanco semitransparente */
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .splide__arrow:hover {
+        background-color: #ffffff;
+        transform: scale(1.1);
+    }
+
+    .splide__arrow--prev {
+        left: -1.5rem;
+    }
+
+    .splide__arrow--next {
+        right: -1.5rem;
+    }
+
+    /* Responsive ajuste de posición */
+    @media (max-width: 768px) {
+        .splide__arrow--prev {
+            left: -1rem;
+        }
+
+        .splide__arrow--next {
+            right: -1rem;
+        }
+    }
+
+    .btn {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
 </style>
 
 <div class="mb-5">
-    <div class="bg-radial-hero">
-        <div style="text-align: center;">
-            <h1 style="font-weight: bold; font-size: 2.8rem;">Conocimiento para Todos</h1>
-            <p class="lead mt-3">BUSCAR <span style="color: #00e600; font-weight: bold;">1,237</span> RECURSOS DISPONIBLES</p>
+    <div class="bg-hero">
+        <h1 class="font-bold text-[2.8rem] text-white">
+            Conocimiento para Todos
+        </h1>
+        <p class="lead mt-3">
+            BUSCAR <span style="color: #20c997; font-weight: bold;">1,237</span> RECURSOS DISPONIBLES
+        </p>
 
-            <div class="container row justify-content-center mt-4">
-                <form>
-                    <div class="row g-2">
-                        <div class="col-sm-2">
-                            <select class="form-select">
-                                <option selected>Todo</option>
-                                <option>Artículos</option>
-                                <option>Autores</option>
-                                <option>Temas</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" placeholder="Buscar...">
-                        </div>
-                        <div class="col-sm-2">
-                            <x-button text="🔍 Buscar" color="btn-secondary" class="w-100" />
-                        </div>
+        <div class="container row justify-content-center mt-4">
+            <form>
+                <div class="row g-5 justify-content-center">
+                    <div class="col-sm-2">
+                        <select class="form-select">
+                            <option selected>Todo</option>
+                            <option>Artículos</option>
+                            <option>Autores</option>
+                            <option>Temas</option>
+                        </select>
                     </div>
-                </form>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" placeholder="Buscar...">
+                    </div>
+                    <div class="col-sm-1">
+                        <x-button icon="bi bi-search" color="btn-light"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-dark">BÚSQUEDA AVANZADA</a>
+            <a href="#" class="btn btn-dark">TEMAS POPULARES</a>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="container-fluid mt-5">
+
+            <h3 class=" container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Autores más destacados</h3>
+
+            <div class="container row row-cols-1 row-cols-md-3 g-4">
+                <x-card
+                    img="/images/autor01.png"
+                    alt="Autor 1"
+                    title="Mario Vargas LLosa"
+                    description="Premio Nobel de Literatura, autor de obras como 'La ciudad y los perros'."
+                    href="#" />
+
+                <x-card
+                    img="/images/autor02.webp"
+                    alt="Autor 2"
+                    title="J. R. R. Tolkien"
+                    description="Autor de obras como 'El Seno de los Anillos' y 'El Hobbit'."
+                    href="#" />
+
+                <x-card
+                    img="/images/autor03.webp"
+                    alt="Autor 3"
+                    title="Octavio Paz"
+                    description="Premio Nobel de Literatura, autor de obras como 'El olvido'."
+                    href="#" />
             </div>
+        </div>
 
-            <div class="mt-4 d-flex justify-content-center gap-3">
-                <a href="#" class="btn btn-dark">BÚSQUEDA AVANZADA</a>
-                <a href="#" class="btn btn-dark">TEMAS POPULARES</a>
+        <div class="container-fluid mt-5">
+            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Titulos populares</h3>
+
+            <div class="container row row-cols-1 row-cols-md-3 g-4">
+                <x-card
+                    img="images/titulo01.webp"
+                    alt="Imagen del artículo"
+                    title="Tu sueño imperios han sido"
+                    description="Álvaro Enrigue narra el histórico encuentro entre Cortés y Moctezuma el 8 de noviembre de 1519, 
+                        un choque entre dos mundos y visiones opuestas. Su novela mezcla historia y ficción para explorar qué ocurrió realmente y 
+                        cómo pudo haberse interpretado.La obra está cargada de misterio, violencia y ambición imperial. 
+                        Publicada por Anagrama, ha sido destacada por Karla Martínez de Salas de Vogue México y Latinoamérica."
+                    href="#"
+                    btnText="Leer más"
+                    btnColor="btn-warning"
+                    btnIcon="bi bi-arrow-right-circle" />
+
+                <x-card
+                    img="images/titulo02.webp"
+                    alt="Imagen del artículo"
+                    title="La última casa"
+                    description="Arantxa Urretabizkaia aborda la vejez con originalidad, lejos de los 
+                        clichés, y ganó el premio Euskadi con su versión en euskera. La novela mezcla misterio, 
+                        recuerdos y decisiones pasadas mientras una mujer busca su refugio final en Hendaya. 
+                        En un entorno lleno de secretos, vecinos vigilantes y fantasmas del pasado, 
+                        se construye una historia íntima y única."
+                    href="#"
+                    btnText="Leer más"
+                    btnColor="btn-warning"
+                    btnIcon="bi bi-arrow-right-circle" />
+
+                <x-card
+                    img="images/titulo03.webp"
+                    alt="Imagen del artículo"
+                    title="Silencios que matan"
+                    description="Silencios que matan, de Jordan Harper, es una novela negra intensa y premiada, 
+                        ambientada en una Los Ángeles brutal y luminosa. Ganadora del premio Ian Fleming Steel 
+                        Dagger, fue destacada por medios como The New York Times y The Guardian. 
+                        Con un estilo que mezcla crudeza y poesía, ofrece una mirada feroz y emotiva a los contrastes urbanos."
+                    href="#"
+                    btnText="Leer más"
+                    btnColor="btn-warning"
+                    btnIcon="bi bi-arrow-right-circle" />
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid mt-5">
+        <div class="container-fluid my-5">
+            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Títulos Recientemente Subidos</h3>
 
-        <h3 class=" container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Autores más destacados</h3>
-
-        <div class="container row row-cols-1 row-cols-md-3 g-4">
-            <x-card
-                img="ruta_de_imagen_1.jpg"
-                alt="Autor 1"
-                title="Nombre del Autor 1"
-                description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
-                href="#" />
-
-            <x-card
-                img="ruta_de_imagen_1.jpg"
-                alt="Autor 2"
-                title="Nombre del Autor 2"
-                description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
-                href="#" />
-
-            <x-card
-                img="ruta_de_imagen_1.jpg"
-                alt="Autor 3"
-                title="Nombre del Autor 3"
-                description="Descripción breve del autor. Tal vez sus áreas de investigación o una frase destacada."
-                href="#" />
+            <div id="splide" class="splide mx-auto mb-5 text-center z-0">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="/images/libro01.jpeg" class="book-cover" alt="El Bosque Mágico">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/images/libro02.jpeg" class="book-cover" alt="Alicia en el País de las Maravillas">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/images/libro03.jpeg" class="book-cover" alt="Harry Potter y la piedra filosofal">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/images/libro04.jpeg" class="book-cover" alt="It (Eso)">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/images/libro05.webp" class="book-cover" alt="Libro 5">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="/images/libro06.jpg" class="book-cover" alt="Libro 6">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid mt-5">
-        <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Futuros Artículos</h3>
+        <div class="container-fluid mt-5">
+            <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Conferencias</h3>
 
-        <div class="container row row-cols-1 row-cols-md-3 g-4">
-            <x-card
-                img="ruta.jpg"
-                alt="Imagen del artículo"
-                title="Título"
-                description="Descripción del contenido."
-                href="#"
-                btnText="Leer más"
-                btnColor="btn-warning"
-                btnIcon="bi bi-arrow-right-circle" />
+            <div class="container row row-cols-1 row-cols-md-3 g-4">
+                <x-card-conference
+                    date="19"
+                    month="MAY"
+                    title="INFOCOM 2025"
+                    location="Londres, Reino Unido"
+                    registerUrl="#"
+                    moreUrl="#" />
 
-            <x-card
-                img="ruta.jpg"
-                alt="Imagen del artículo"
-                title="Título"
-                description="Descripción del contenido."
-                href="#"
-                btnText="Leer más"
-                btnColor="btn-warning"
-                btnIcon="bi bi-arrow-right-circle" />
+                <x-card-conference
+                    date="8"
+                    month="JUN"
+                    title="Conferencia Internacional en Comunicaciones"
+                    location="Montreal, Canadá"
+                    registerUrl="#"
+                    moreUrl="#" />
 
-            <x-card
-                img="ruta.jpg"
-                alt="Imagen del artículo"
-                title="Título"
-                description="Descripción del contenido."
-                href="#"
-                btnText="Leer más"
-                btnColor="btn-warning"
-                btnIcon="bi bi-arrow-right-circle" />
+                <x-card-conference
+                    date="19"
+                    month="OCT"
+                    title="IEEE SENSORS 2025"
+                    location="Vancouver, Canadá"
+                    registerUrl="#"
+                    moreUrl="#" />
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid mt-5">
-        <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-2">Novedades y Conferencias</h3>
+        <div class="container-fluid contact">
+
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="display-4 text-center">Contactanos</h4>
+                    <hr class="my-4">
+                </div>
         
-        <div id="newsCarousel" class="container carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="ruta_de_imagen_1.jpg" class="d-block w-100 rounded" alt="Noticia 1">
+                <div class="col-xs-12 col-md-6 " id="contact">
+        
+                    <form class="mb-sm-4" id="for">
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlInput2">Nombre</label>
+                            <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="User Name">
                         </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <h4 class="fw-bold">¡Nuevo Webinar!</h4>
-                            <p>La importancia de la educación continua para ingenieros. Regístrate gratis hoy.</p>
-                            <a href="#" class="btn btn-primary mt-2">Registrar</a>
+        
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email </label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
                         </div>
-                    </div>
+        
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+        
+                        <button type="submit" class="btn btn-info submit-form">Submit</button>
+                    </form>
+        
                 </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="ruta_de_imagen_2.jpg" class="d-block w-100 rounded" alt="Noticia 2">
-                        </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <h4 class="fw-bold">Tecnología 5G/6G</h4>
-                            <p>Explora el testbed de protocolos e innovación en redes futuras.</p>
-                            <a href="#" class="btn btn-primary mt-2">Leer más</a>
-                        </div>
-                    </div>
+        
+                <div class="col-xs-12 col-md-6" id="contact">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.410276127892!2d-79.04060262589138!3d-8.115327781204812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9fb3467261%3A0x752547ad9a204df6!2sUniversidad%20Nacional%20de%20Trujillo%20(UNT)!5e1!3m2!1ses-419!2spe!4v1734127574943!5m2!1ses-419!2spe"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        
                 </div>
+        
+        
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-
-        <div class="container row row-cols-1 row-cols-md-3 g-4">
-            <x-card-conference
-                date="19"
-                month="MAY"
-                title="INFOCOM 2025"
-                location="Londres, Reino Unido"
-                registerUrl="#"
-                moreUrl="#" />
-
-            <x-card-conference
-                date="8"
-                month="JUN"
-                title="Conferencia Internacional en Comunicaciones"
-                location="Montreal, Canadá"
-                registerUrl="#"
-                moreUrl="#" />
-
-            <x-card-conference
-                date="19"
-                month="OCT"
-                title="IEEE SENSORS 2025"
-                location="Vancouver, Canadá"
-                registerUrl="#"
-                moreUrl="#" />
+            <div class="row my-4">
+                <div class="col-lg-12">
+                    <div class=" mt-4 border-0 mb-4">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                          <div class="card-body d-flex align-items-center gap-3 c-detail pl-0">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Address</h6>
+                              <p class="">601 Sherwood Ave.
+                                <br> San Pablo</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center" >
+                          <div class="card-body d-flex align-items-center gap-3 c-detail">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Phone</h6>
+                              <p class="">951 546 944
+                                <br> 630 446 8851</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center">
+                          <div class="card-body d-flex align-items-center gap-3 c-detail">
+                            <div class="mr-3 align-self-center">
+                              <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+                            </div>
+                            <div class="">
+                              <h6 class="font-weight-medium">Email</h6>
+                              <p class="">
+                                info@gmail.com
+                                <br> 123@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        
         </div>
     </div>
 </div>
+<style>
+    .contact{
+  padding: 5% 10%;
+}
+
+.submit-form{
+    margin: 5% 3% 5% 0;
+    color: #f8f9fa;
+}
+
+.form-group{
+    margin-top: 4px;
+}
+
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Splide('#splide', {
+            type: 'loop',
+            perPage: 4,
+            gap: '1rem',
+            arrows: true,
+            breakpoints: {
+                1024: {
+                    perPage: 3,
+                },
+                768: {
+                    perPage: 2,
+                },
+                480: {
+                    perPage: 1,
+                },
+            },
+        }).mount();
+    });
+</script>
+
 @endsection
