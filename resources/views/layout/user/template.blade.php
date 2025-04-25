@@ -22,6 +22,7 @@
 
 <body>
 
+     <!-- Nav AREA OCULTA PARA HACER HOVER-->
     <div class="top-hover-area"></div>
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary bg-white">
@@ -67,11 +68,12 @@
     </nav>
 
 
-
+  <!-- #CONTENT -->
     <main class="main-content">
         @yield('content')
     </main>
 
+      <!-- CHATBOT-->
     <button class="chatbot-toggler">
         <span class="material-symbols-rounded">mode_comment</span>
         <span class="material-symbols-outlined">close</span>
@@ -93,6 +95,7 @@
         </div>
     </div>
 
+     <!-- Footer -->
     <footer class="mt-auto d-flex justify-content-center bg-dark text-white pt-4 pb-4">
         <div class="container">
             <div class="row">
@@ -203,7 +206,9 @@
 
     nav li a:hover {
         color: black !important;
-        background-color: #56e2d7 !important;
+        background-color: #7af3e9 !important;
+        border-radius: 15px;
+        transition: all 0.5s;
     }
 
    
@@ -288,16 +293,6 @@
     }
 
     
- 
-
-    /*Landmark*/
-    #toggle-em,
-    #toggle-oh,
-    #toggle-ct,
-    #toggle-ap,
-    #toggle-al {
-        display: none;
-    }
 
     
     .labelbtn {
@@ -323,6 +318,7 @@
 
     /* CHATBOT */
 
+     /* TOGGLER DEL BOTON */
     .chatbot-toggler {
         position: fixed;
         bottom: 30px;
@@ -340,6 +336,7 @@
         transition: all 0.2s ease;
     }
 
+      /* ANIMACIÓN DEL X */
     body.show-chatbot .chatbot-toggler {
         transform: rotate(90deg);
     }
@@ -358,6 +355,7 @@
         opacity: 1;
     }
 
+      /* CONTAINER DEL CHATBOT */
     .chatbot {
         position: fixed;
         right: 35px;
@@ -403,6 +401,7 @@
         font-size: 1.4rem;
     }
 
+      /* CAJA DE TEXTO */
     .chatbot .chatbox {
         overflow-y: auto;
         height: 510px;
