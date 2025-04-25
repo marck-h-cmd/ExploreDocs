@@ -8,7 +8,7 @@
 <div class="container-fluid mt-5 pt-5 bg-white d-flex flex-column gap-5">
 
     <div class="text-center">
-      <h2 class="text-primary  fs-1 fw-semibold">Labcam</h2>
+      <h2 class="text-primary  fs-1 fw-semibold">ExploreDocs</h2>
       <div class="mx-auto bg-primary" style="width: 30%; height: 2px;"></div>
     </div>
   

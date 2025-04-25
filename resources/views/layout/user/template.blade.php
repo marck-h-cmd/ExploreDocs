@@ -21,6 +21,8 @@
 </head>
 
 <body>
+
+    <div class="top-hover-area"></div>
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary bg-white">
         <div class="container-fluid">
@@ -82,7 +84,7 @@
         <ul class="chatbox">
             <li class="chat incoming">
                 <span class="material-symbols-outlined">smart_toy</span>
-                <p>Hi there 👋<br />How can I help you today?</p>
+                <p>Hola 👋<br />En que te puedo ayudar?</p>
             </li>
         </ul>
         <div class="chat-input">
@@ -105,12 +107,12 @@
                     <h5>Enlaces Rápidos</h5>
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
+                            <a class="nav-link text-white" href="{{route('home')}}">
                                 <i class="bi bi-house"></i> Inicio
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
+                            <a class="nav-link text-white" href="{{route('about')}}">
                                 <i class="bi bi-info-circle"></i> Nosotros
                             </a>
                         </li>
@@ -137,13 +139,13 @@
                 <div class="col-md-3 mb-3">
                     <h5>Síguenos</h5>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/tu_pagina"
+                        <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank"
                                 class="text-white"><i class="bi bi-facebook fs-4"></i></a></li>
-                        <li class="list-inline-item"><a href="https://twitter.com/tu_cuenta" class="text-white"><i
+                        <li class="list-inline-item"><a href="https://twitter.com" target="_blank" class="text-white"><i
                                     class="bi bi-twitter fs-4"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/tu_cuenta"
+                        <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"
                                 class="text-white"><i class="bi bi-instagram fs-4"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/tu_empresa"
+                        <li class="list-inline-item"><a href="https://www.linkedin.com" target="_blank"
                                 class="text-white"><i class="bi bi-linkedin fs-4"></i></a></li>
                     </ul>
                 </div>
@@ -180,6 +182,23 @@
         font-size: 1em;
         color: grey !important;
         transition: all 0.5s ease;
+    }
+
+    .navbar {
+      transition: top 0.3s ease;
+    }
+
+    .navbar.hidden {
+      top: -100px;
+    }
+
+    .top-hover-area {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      z-index: 1051; 
     }
 
     nav li a:hover {
@@ -519,8 +538,55 @@
 
 
 
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const hoverArea = document.querySelector('.top-hover-area');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScrollTop) {
+        navbar.classList.add('hidden');  // scroll hacia abajo
+    }else if(currentScroll==0){
+        navbar.classList.remove('hidden'); // scroll hacia arriba
+    }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // calculo del scroll
+    });
+
+    hoverArea.addEventListener('mouseenter', () => {
+      navbar.classList.remove('hidden'); // mostrar navbar al pasar el mouse por arriba
+    });
+  </script>
+
+<script>
+    const chatbotToggler = document.querySelector(".chatbot-toggler");
+    const closeBtn = document.querySelector(".close-btn");
+    const chatbox = document.querySelector(".chatbox");
+    const chatInput = document.querySelector(".chat-input textarea");
+    const sendChatBtn = document.querySelector(".chat-input span");
 
 
+    chatInput.addEventListener("input", () => {
+        chatInput.style.height = `${inputInitHeight}px`;
+        chatInput.style.height = `${chatInput.scrollHeight}px`;
+    });
+
+    chatInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+            e.preventDefault();
+            handleChat();
+        }
+    });
+
+    //ssendChatBtn.addEventListener("click", handleChat);
+    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+
+
+
+</script>
 
 
 
@@ -576,6 +642,7 @@
 
 
 <script>
+    /*
     const chatbotToggler = document.querySelector(".chatbot-toggler");
     const closeBtn = document.querySelector(".close-btn");
     const chatbox = document.querySelector(".chatbox");
@@ -670,5 +737,5 @@
 
     sendChatBtn.addEventListener("click", handleChat);
     closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));  */
 </script>
