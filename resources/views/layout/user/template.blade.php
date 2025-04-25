@@ -22,9 +22,9 @@
 
 <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <img src="/images/logo.png" alt="Logoimg" class=" Logoimg" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('about')}}">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -54,9 +54,9 @@
                             Explore
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Popular</a></li>
-                            <li><a class="dropdown-item" href="#">Reciente</a></li>
-                            <li><a class="dropdown-item" href="#">Más Valorado</a></li>
+                            <li><a class="dropdown-item" href="#">Conferencias</a></li>
+                            <li><a class="dropdown-item" href="#">Eventos</a></li>
+                            <li><a class="dropdown-item" href="#">Noticias</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -173,14 +173,7 @@
 
 
 <style>
-    /*NavBar*/
-    #eenavbar {
-        background-color: #F9F8EB;
-        border: 0;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-
-    }
-
+   
     nav a {
         font-family: 'Raleway', sans-serif !important;
         font-weight: bold;
@@ -194,11 +187,7 @@
         background-color: #56e2d7 !important;
     }
 
-    .selectedee {
-        background-color: #FFE1B6 !important;
-        color: darkgrey !important;
-    }
-
+   
     .container {
         margin-right: 2% !important;
         margin-left: 2% !important;
@@ -218,14 +207,7 @@
         text-align: center !important;
     }
 
-    #contactfoot,
-    #Addressfoot,
-    #followfoot {
-        float: left;
-        width: 33%;
-        text-align: center;
-        height: 150px;
-    }
+  
 
     /*footer*/
     /*home*/
@@ -280,63 +262,14 @@
         margin-right: 65px !important;
     }
 
-    /*spirtual*/
-    .spirtualcont {
-        top: 10%;
-    }
-
+   
     .row {
         max-width: 100%;
         z-index: 30;
     }
 
-    .eeboxsp {
-        border-radius: 9px !important;
-        background-color: #B0BEC5 !important;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    }
-
-    .eeboxsph5 {
-        font-family: Agency FB !important;
-        font-size: 25px;
-    }
-
-    #eespheadtag {
-        font-family: Agency FB !important;
-        font-size: 70px !important;
-    }
-
-    #eesppStag {
-        font-family: Courier New !important;
-        text-align: justify !important;
-        line-height: 1 !important;
-        color: #455A64 !important;
-        font-size: 5vh !important
-    }
-
-    .eespmodalwin {
-        background-color: #B0BEC5 !important;
-    }
-
-    .spmodalh {
-        color: #263238 !important;
-        font-size: 30px !important;
-        font-weight: bold;
-    }
-
-    .spmodalp {
-        font-family: Courier New !important;
-        text-align: center !important;
-        line-height: 1 !important;
-        color: #455A64 !important;
-        font-size: 18px !important
-    }
-
-    #map,
-    #googleMap {
-        height: 400px;
-        width: 100%;
-    }
+    
+ 
 
     /*Landmark*/
     #toggle-em,
@@ -347,45 +280,7 @@
         display: none;
     }
 
-    .eecltogcontem,
-    .eecltogcontem,
-    .eecltogcontoh,
-    .eecltogcontct,
-    .eecltogcontal,
-    .eecltogcontap {
-        background-color: #CFD8DC;
-        width: 60%;
-        overflow: hidden;
-        max-height: 0;
-        padding: 0;
-        margin: 0 auto;
-        -webkit-transition: all 2s ease;
-        box-shadow: inset 0px 0px 10px 0px #ABABAB;
-        -webkit-box-shadow: inset 0px 0px 10px 0px #ABABAB;
-        -moz-box-shadow: inset 0px 0px 10px 0px #ABABAB;
-        -o-box-shadow: inset 0px 0px 10px 0px #ABABAB;
-    }
-
-    #toggle-em:checked~.eecltogcontem {
-        max-height: 100vh;
-    }
-
-    #toggle-oh:checked~.eecltogcontoh {
-        max-height: 100vh;
-    }
-
-    #toggle-ct:checked~.eecltogcontct {
-        max-height: 100vh;
-    }
-
-    #toggle-al:checked~.eecltogcontal {
-        max-height: 100vh;
-    }
-
-    #toggle-ap:checked~.eecltogcontap {
-        max-height: 100vh;
-    }
-
+    
     .labelbtn {
         font-family: Agency FB;
         font-weight: bold;
@@ -405,59 +300,7 @@
         box-shadow: 0px -4px 91px -31px rgba(0, 0, 0, 0.75);
     }
 
-    .h2cltogp {
-        font-family: Courier New !important;
-        text-align: center !important;
-        line-height: 1 !important;
-        color: #455A64 !important;
-        font-size: 18px !important
-    }
-
-    .natimg {
-        max-width: 80%;
-        margin-right: 10%;
-        margin-left: 10%;
-        margin-top: 10%;
-        padding: 0;
-        border-radius: 2vh 2vh 0 0;
-        -webkit-box-shadow: 0px -2px 15px 2px rgba(0, 0, 0, 0.12);
-        -moz-box-shadow: 0px -2px 15px 2px rgba(0, 0, 0, 0.12);
-        box-shadow: 0px -2px 15px 2px rgba(0, 0, 0, 0.12);
-
-    }
-
-    #naturebod {
-        background: #263238 !important;
-        position: relative;
-    }
-
-    #nat2back {
-        background: #343434;
-        z-index: 2;
-        max-width: 100%;
-        height: 1000px;
-        box-shadow: 0px -1px 52px -11px rgba(0, 0, 0, 1);
-    }
-
-    #natimgtag {
-        font: 400 100px/1.3 'Berkshire Swash', Helvetica, sans-serif;
-        color: white;
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 35vw !important;
-        align-content: center;
-        z-index: 3;
-
-    }
-
-    #covconttt {
-        margin-top: 15%;
-
-    }
-
-    #covnav {
-        text-align: center;
-    }
+    
 
     /* CHATBOT */
 
@@ -675,6 +518,63 @@
 </style>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
     const chatbotToggler = document.querySelector(".chatbot-toggler");
     const closeBtn = document.querySelector(".close-btn");
@@ -726,10 +626,9 @@
             const data = await response.json();
             if (!response.ok) throw new Error(data.error.message);
 
-            // Get the API response text and update the message element
+            
             messageElement.textContent = data.choices[0].message.content;
         } catch (error) {
-            // Handle error
             messageElement.classList.add("error");
             messageElement.textContent = error.message;
         } finally {

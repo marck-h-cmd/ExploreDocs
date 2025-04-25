@@ -152,8 +152,8 @@
         </div>
 
         <div class="  mt-4 d-flex justify-content-center gap-3">
-            <a href="#" class="btn btn-info">BÚSQUEDA AVANZADA</a>
-            <a href="#" class="btn btn-info">TEMAS POPULARES</a>
+            <a href="#" class="btn btn-info" style="color: #fff">BÚSQUEDA AVANZADA</a>
+            <a href="#" class="btn btn-info" style="color: #fff">TEMAS POPULARES</a>
         </div>
     </div>
     <div class="section-content">
@@ -290,6 +290,52 @@
             </div>
         </div>
 
+        
+        <div class="container-fluid mt-5">
+            <div class="row g-4"> 
+                
+                <div class="col-md-6 h-auto"> 
+                    <div class="h-auto"> 
+                        <img src="https://images.newscientist.com/wp-content/uploads/2025/01/16133319/event-preview-1-740-x-630.jpg?crop=3%3A2%2Csmart" 
+                             class="img-fluid w-100 h-100 object-fit-cover rounded" 
+                             alt="News image">
+                    </div>
+                </div>
+        
+                
+                <div class="col-md-6 "> 
+                    <div class="card my-2 "> 
+                        <div class="card-body d-flex flex-md-row flex-column"> 
+                            <img src="https://ieeexplore.ieee.org/xploreAssets/images/cms/0e76dde4-4c17-46bd-a84c-f7a578231c03_highlight.jpg" 
+                                 class="card-img-left img-fluid  me-md-3 mb-3 mb-md-0" 
+                                 style="max-width: 200px; height: auto; object-fit: cover;" 
+                                 alt="Card image">
+                            <div>
+                                <h5 class="card-title">Special title treatment</h5>
+                            
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card my-2 "> 
+                        <div class="card-body d-flex flex-md-row flex-column"> 
+                            <img src="https://ieeexplore.ieee.org/xploreAssets/images/cms/0e76dde4-4c17-46bd-a84c-f7a578231c03_highlight.jpg" 
+                                 class="card-img-left img-fluid  me-md-3 mb-3 mb-md-0" 
+                                 style="max-width: 200px; height: auto; object-fit: cover;" 
+                                 alt="Card image">
+                            <div>
+                                <h5 class="card-title">Special title treatment</h5>
+                            
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid contact">
 
             <div class="row">
@@ -315,7 +361,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Message</label>
+                            <label for="exampleFormControlTextarea1">Mensaje</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
