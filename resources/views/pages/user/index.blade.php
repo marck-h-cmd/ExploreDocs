@@ -24,27 +24,29 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        /* Oscurece la imagen */
         z-index: -1;
     }
 
+    /*Media para dispositivos móviles*/
     @media (max-width: 768px) {
         .bg-hero {
-            padding: 60px 0;
+            font-size: 2.8rem;
         }
     }
 
+    /*Hover para las tarjetas*/
     .card:hover {
         transform: scale(1.02);
         transition: transform 0.3s ease;
     }
 
+    /*Estilos para el contenido de la sección*/
     .section-content {
         background-color: #f8f9fa;
-        /* Blanco o gris claro */
         padding: 60px 0;
     }
 
+    /*Estilos para el carrusel de libros*/
     .book-cover {
         width: 140px;
         height: auto;
@@ -53,6 +55,7 @@
         transition: transform 0.3s ease;
     }
 
+    /*Hover para las imágenes de los libros*/
     .book-cover:hover {
         transform: scale(1.05);
     }
@@ -61,16 +64,17 @@
         padding: px 0;
     }
 
+    /*Estilos para el carrusel*/
     #splide {
         margin: 0 auto;
         max-width: 80%;
     }
 
+    /*estilo para las flechas*/
     .splide__arrow {
         width: 40px;
         height: 40px;
         background-color: #ffffffcc;
-        /* blanco semitransparente */
         border: none;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -82,15 +86,18 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
+    /*hover para las flechas*/
     .splide__arrow:hover {
         background-color: #ffffff;
         transform: scale(1.1);
     }
 
+    /*Estilo para las flechas de la izquierda y derecha*/
     .splide__arrow--prev {
         left: -1.5rem;
     }
 
+    /*Ajuste de posición para la flecha derecha*/
     .splide__arrow--next {
         right: -1.5rem;
     }
@@ -112,18 +119,19 @@
         }
     }
 
+    /*Estilo para el botón de búsqueda*/
     .btn {
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
+    /*Hover para el botón de búsqueda*/
     .btn:hover {
         transform: scale(1.05);
     }
 </style>
-
 <div class="mb-5">
     <div class="bg-hero">
-        <h1 class="font-bold text-[2.8rem] text-white">
+        <h1 class="font-bold text-white display-4 display-md-3">
             Conocimiento para Todos
         </h1>
         <p class="lead mt-3">
@@ -151,9 +159,9 @@
             </form>
         </div>
 
-        <div class="  mt-4 d-flex justify-content-center gap-3">
-            <a href="#" class="btn btn-info" style="color: #fff">BÚSQUEDA AVANZADA</a>
-            <a href="#" class="btn btn-info" style="color: #fff">TEMAS POPULARES</a>
+        <div class="mt-4 d-flex flex-wrap justify-content-center gap-3">
+            <a href="#" class="btn btn-info btn-sm btn-md" style="color: #fff">BÚSQUEDA AVANZADA</a>
+            <a href="#" class="btn btn-info btn-sm btn-md" style="color: #fff">TEMAS POPULARES</a>
         </div>
     </div>
     <div class="section-content">
