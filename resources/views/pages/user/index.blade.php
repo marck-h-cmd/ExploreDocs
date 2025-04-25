@@ -290,7 +290,7 @@
             </div>
         </div>
 
-        
+        <!--
         <div class="container-fluid mt-5">
             <div class="row g-4"> 
                 
@@ -335,7 +335,7 @@
                 </div>
             </div>
         </div>
-
+    -->
         <div class="container-fluid contact">
 
             <div class="row">
