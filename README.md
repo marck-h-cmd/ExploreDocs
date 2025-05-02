@@ -9,7 +9,7 @@
 
 # ExploreDocs
 
-ExploreDocs website. A website to explore papers, thesis, exclusive books in one place
+ExploreDocs website. A website to explore papers, thesis, exclusive books in one place.
 ## App Configuration guide
 
 ### Basic Steps
