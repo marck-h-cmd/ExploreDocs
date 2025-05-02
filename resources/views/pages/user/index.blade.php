@@ -164,7 +164,7 @@
             <a href="#" class="btn btn-info btn-sm btn-md" style="color: #fff">TEMAS POPULARES</a>
         </div>
     </div>
-      <!-- CONTAINER AUTORES MÁS DESTACADOS -->
+        <!-- CONTAINER AUTORES MÁS DESTACADOS -->
     <div class="section-content">
         <div class="container-fluid mt-5">
 
@@ -193,7 +193,7 @@
                     moreUrl="#" />
             </div>
         </div>
-          <!-- CONTAINER TITULOS POPULARES-->
+            <!-- CONTAINER TITULOS POPULARES-->
         <div class="container-fluid mt-5">
             <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Títulos populares</h3>
 
@@ -239,7 +239,7 @@
                     btnIcon="bi bi-arrow-right-circle" />
             </div>
         </div>
-          <!-- CONTAINER TITULOS RECIENTES -->
+            <!-- CONTAINER TITULOS RECIENTES -->
         <div class="container-fluid my-5">
             <h3 class="container text-uppercase mb-4 fw-bold text-dark fs-2 px-4">Títulos Recientemente Subidos</h3>
 
