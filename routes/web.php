@@ -10,6 +10,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 Route::get('/publicaciones', [HomeController::class, 'papers'])->name('papers');
 
+Route::get('/libros', [HomeController::class, 'books'])->name('books');
+
 Route::get('/noticias', [HomeController::class, 'papers'])->name('noticias');
 
 Route::post('/create', [ContactoController::class, 'store'])->name('contacto.store');

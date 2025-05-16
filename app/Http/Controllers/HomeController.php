@@ -17,4 +17,7 @@ class HomeController extends Controller
     public function about(){
            return view('pages.user.about.about');
     }
+     public function books(){
+           return view('pages.user.libros.index');
+    }
 }
