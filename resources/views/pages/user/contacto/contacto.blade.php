@@ -29,16 +29,16 @@
                     <div>
                         <label for="exampleFormControlInput2" class="block font-semibold mb-2">Nombre</label>
                         <input type="text" name="nombres" class="w-full rounded border-gray-300 px-4 py-2 focus:ring-emerald-400"
-                            id="exampleFormControlInput2" placeholder="Nombre">
+                            id="exampleFormControlInput2" value="{{ old('nombres') }}" placeholder="Nombre">
                     </div>
                     <div>
                         <label for="exampleFormControlInput1" class="block font-semibold mb-2">Email</label>
                         <input type="email" name="email" class="w-full rounded border-gray-300 px-4 py-2 focus:ring-emerald-400"
-                            id="exampleFormControlInput1" placeholder="name@example.com">
+                            id="exampleFormControlInput1" value="{{ old('email') }}" placeholder="name@example.com">
                     </div>
                     <div>
                         <label for="exampleFormControlTextarea1" class="block font-semibold mb-2">Mensaje</label>
-                        <textarea name="mensaje" class="w-full rounded border-gray-300 px-4 py-2 focus:ring-emerald-400" id="exampleFormControlTextarea1"
+                        <textarea name="mensaje" {{ old('mensaje') }} class="w-full rounded border-gray-300 px-4 py-2 focus:ring-emerald-400" id="exampleFormControlTextarea1"
                             rows="3"></textarea>
                     </div>
                     <button type="submit"

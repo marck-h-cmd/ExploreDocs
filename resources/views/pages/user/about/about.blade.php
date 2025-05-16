@@ -27,7 +27,7 @@
     <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/HOW-DO-YOU-DESIGN-A-LIBRARY-MANAGEMENT-SYSTEM-min.png" alt="Main Image" class="rounded" style="width: 460px; height: 400px;" />
     <div class="flex flex-col gap-2 m-2">
       <div class="text-center md:text-left">
-        <h3 class="text-blue-600 font-bold">Visión</h3>
+        <h3 class="text-blue-600 text-2xl font-bold">Visión</h3>
         <div class="bg-blue-600 mx-auto md:mx-0 w-36 h-0.5"></div>
       </div>
       <p class="italic font-light text-black max-w-lg">
@@ -43,7 +43,7 @@
     <img src="https://www.xiphiastec.com/es/assets/img/technology/lms.png" alt="Highlighted Image" class="rounded" style="width: 460px; height: 350px;" />
     <div class="flex flex-col gap-2 m-2">
       <div class="text-center md:text-left">
-        <h3 class="text-blue-600 font-bold">Misión</h3>
+        <h3 class="text-blue-600 text-2xl font-bold">Misión</h3>
         <div class="bg-blue-600 mx-auto md:mx-0 w-36 h-0.5"></div>
       </div>
       <p class="italic font-light text-black max-w-lg">

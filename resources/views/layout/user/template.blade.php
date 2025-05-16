@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+      <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">   -->
-    <!--Bootstrap MCDN-->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -266,7 +263,7 @@
                             </a>
                         </li>
                         <li class="mb-1">
-                            <a class="text-white hover:text-gray-300 flex items-center" href="#">
+                            <a class="text-white hover:text-gray-300 flex items-center" href="{{route('contacto')}}">
                                 <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                     fill="currentColor">
                                     <path
@@ -353,6 +350,16 @@
             </div>
         </div>
     </footer>
+
+    <div x-data="{ scrollTop: false }" x-init="window.addEventListener('scroll', () => scrollTop = window.scrollY > 50)" class="fixed bottom-24 right-4">
+        <button x-show="scrollTop" x-cloak @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="bg-[#98C560] text-white p-3 rounded-md shadow-lg focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+        </button>
+    </div>
 
 
    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
@@ -454,7 +461,7 @@
     .chatbot-toggler {
         position: fixed;
         bottom: 30px;
-        right: 35px;
+        right: 16px;
         outline: none;
         border: none;
         height: 50px;

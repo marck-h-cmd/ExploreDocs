@@ -20,15 +20,15 @@
                     Accede a más de <span class="text-green-400 font-semibold">1.237</span> recursos disponibles
                 </p>
                 <div class="w-full max-w-3xl">
-                    <form class="flex items-center bg-white rounded-lg overflow-hidden shadow-lg">
-                        <select class="w-1/3 md:w-1/4 px-4 py-3 text-gray-700 focus:outline-none" aria-label="Categoría">
+                    <form class="flex items-center rounded-lg overflow-hidden shadow-lg">
+                        <select class="w-1/3 md:w-1/4 px-4 py-3 text-gray-700 focus:outline-none rounded-lg" aria-label="Categoría">
                             <option>Todo</option>
                             <option>Artículos</option>
                             <option>Autores</option>
                             <option>Temas</option>
                         </select>
-                        <input type="text" placeholder="Buscar..."
-                            class="flex-1 px-4 py-3 text-gray-800 focus:outline-none" />
+                        <input type="text" placeholder="Buscar..." 
+                            class="flex-1 px-4 py-3 text-gray-800 focus:outline-none rounded-lg" />
                         <x-button type="submit"
                             color="bg-green-500 hover:bg-green-600 text-white px-6 py-3 flex items-center justify-center"
                             icon="bi bi-search" />
