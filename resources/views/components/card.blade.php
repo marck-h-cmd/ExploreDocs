@@ -3,39 +3,27 @@
 'alt' => '',
 'title' => '',
 'description' => '',
-'href' => '#',
-'btnText' => 'Ver perfil',
-'btnColor' => 'btn-primary',
-'btnIcon' => null,
-'cardClass' => 'h-100',
-'footerClass' => 'bg-transparent border-top-0 text-center'
+'href' => '',
+'btnText' => '',
+'btnColor' => 'dark:focus:ring-yellow-900',
+'btnIcon' => '',
 ])
 
-<div class="col">
-    <div class="card shadow-sm rounded-4 overflow-hidden {{ $cardClass }}">
-        @if($img)
-        <img src="{{ $img }}" class="card-img-top object-fit-cover w-100" style="height: 200px; object-fit: cover; object-position: center;" alt="{{ $alt }}">
-        @endif
+<div class="w-full max-w-md h-full px-2">
+    <div class="bg-white rounded-2xl shadow p-6 flex flex-col h-full transition-shadow hover:shadow-lg">
 
-        <div class="card-body px-4 py-3">
-            @if($title)
-            <h5 class="card-title  mb-2 fw-semibold">{{ $title }}</h5>
-            @endif
+        <img src="{{ asset($img) }}" alt="{{ $alt }}"
+            class="rounded mb-4 w-full h-48 object-cover">
 
-            @if($description)
-            <p class="card-text">{{ $description }}</p>
-            @endif
-        </div>
+        <h4 class="font-bold text-lg mb-2">{{ $title }}</h4>
 
-        @if($href || $btnIcon || $btnText)
-        <div class="card-footer {{ $footerClass }}">
-            <a href="{{ $href }}" class="btn {{ $btnColor }} transition-all">
-                @if($btnIcon)
-                <i class="{{ $btnIcon }} me-2"></i>
-                @endif
-                {{ $btnText }}
-            </a>
-        </div>
-        @endif
+        <p class="text-gray-900 flex-1 mb-4">{{ $description }}</p>
+
+        <x-button
+            :href="$href"
+            :text="$btnText"
+            :icon="$btnIcon"
+            class="{{ $btnColor }} w-full" />
+
     </div>
 </div>
