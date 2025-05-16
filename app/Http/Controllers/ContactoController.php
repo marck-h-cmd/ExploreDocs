@@ -18,12 +18,12 @@ class ContactoController extends Controller
         
         $request->validate([
             'nombres' => 'required|string|max:255',
-            'email' => 'required|email|max:255',,
+            'email' => 'required|email|max:255',
             'mensaje' => 'required|string',
         ]);
 
         Contacto::create([
-            'nombres' => $request->user,
+            'nombres' => $request->nombres,
             'email' => $request->email,
             'mensaje' => $request->mensaje,
         ]);

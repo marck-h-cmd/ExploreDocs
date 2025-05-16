@@ -207,7 +207,7 @@
 
 
         <!-- CONTACTO -->
-        <section class="bg-gray-50 py-16">
+      <!--  <section class="bg-gray-50 py-16">
             <div class="container mx-auto px-4">
                 <h4 class="text-3xl font-bold text-center mb-6">Contáctanos</h4>
                 <hr class="my-6 border-gray-300">
@@ -265,7 +265,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 
     <script>

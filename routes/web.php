@@ -13,3 +13,5 @@ Route::get('/publicaciones', [HomeController::class, 'papers'])->name('papers');
 Route::get('/noticias', [HomeController::class, 'papers'])->name('noticias');
 
 Route::post('/create', [ContactoController::class, 'store'])->name('contacto.store');
+
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');

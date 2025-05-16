@@ -192,7 +192,7 @@
                     </li>
 
                     <li>
-                        <a href=""
+                        <a href="{{route('contacto')}}"
                             class="text-white block py-2 px-3 rounded md:border-0 md:px-4 bg-[#98C560] w-max md:w-auto">
                             Contacto
                         </a>

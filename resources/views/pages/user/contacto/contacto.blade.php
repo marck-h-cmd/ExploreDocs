@@ -5,7 +5,7 @@
 @section('content')
 <!-- Pop-up para mensaje enviado -->
 @if(session('success'))
-<div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+<div id="popup" class="fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50">
     <div class="bg-white rounded-lg shadow-lg p-6 text-center">
         <h3 class="text-lg font-bold mb-4">{{ session('success') }}</h3>
         <button onclick="closePopup()" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Aceptar</button>
@@ -19,7 +19,7 @@
 @endif
 
     <!-- CONTACTO -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-gray-50 py-16 my-8">
         <div class="container mx-auto px-4">
             <h4 class="text-3xl font-bold text-center mb-6">Contáctanos</h4>
             <hr class="my-6 border-gray-300">
@@ -29,7 +29,7 @@
                     <div>
                         <label for="exampleFormControlInput2" class="block font-semibold mb-2">Nombre</label>
                         <input type="text" name="nombres" class="w-full rounded border-gray-300 px-4 py-2 focus:ring-emerald-400"
-                            id="exampleFormControlInput2" placeholder="User Name">
+                            id="exampleFormControlInput2" placeholder="Nombre">
                     </div>
                     <div>
                         <label for="exampleFormControlInput1" class="block font-semibold mb-2">Email</label>
