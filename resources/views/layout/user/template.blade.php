@@ -76,12 +76,7 @@
                                         Acerca
                                     </a>
                                 </li>
-                                <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('historia') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Historia
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </li>
@@ -343,53 +338,6 @@
         font-size: 1.5vw !important;
         font-family: 'Raleway', sans-serif !important;
     }
-
-    /*Content*/
-    .contentp {
-        font-size: 1.2vw !important;
-        font-family: 'Raleway', sans-serif !important;
-        text-align: justify !important;
-        line-height: 1.5 !important;
-        color: white !important;
-    }
-
-
-
-    .homecont {
-        margin-left: 65px !important;
-        margin-top: 80px !important;
-        margin-right: 65px !important;
-    }
-
-
-    .row-p {
-        max-width: 100%;
-        z-index: 30;
-    }
-
-
-
-
-    .labelbtn {
-        font-family: Agency FB;
-        font-weight: bold;
-        font-size: 25px;
-        cursor: pointer;
-        display: block;
-        text-align: center;
-
-    }
-
-    .labelbtn:hover {
-        color: #CFD8DC;
-    }
-
-    .eeculimg {
-
-        box-shadow: 0px -4px 91px -31px rgba(0, 0, 0, 0.75);
-    }
-
-
 
     /* CHATBOT */
 
@@ -671,7 +619,6 @@
 
     const generateResponse = async (chatElement) => {
         const messageElement = chatElement.querySelector("p");
-        console.log('user', userMessage)
 
 
         const requestOptions = {
@@ -684,7 +631,7 @@
                 model: MODEL,
                 messages: [{
                         role: 'system',
-                        content: "Tu nombre es mackodes, un asistente virtual de la pagina repositorio ExploreDocs, que es una pagina de libros,tesis, papers, Brindas Información de lo que trata y tus mensajes son medio cortos y consisos",
+                        content: "Tu nombre es DeepDocs, un asistente virtual de la pagina repositorio ExploreDocs, que es una pagina de libros,tesis, papers, Brindas Información de lo que trata y tus mensajes son medio cortos y consisos y das sugerencias de libros a veces",
                     },
                     {
                         role: "user",
@@ -730,7 +677,6 @@
     };
 
     chatInput.addEventListener("input", () => {
-
         chatInput.style.height = `${inputInitHeight}px`;
         chatInput.style.height = `${chatInput.scrollHeight}px`;
     });

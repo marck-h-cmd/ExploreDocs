@@ -11,7 +11,7 @@
             <!-- Overlay oscuridad -->
             <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40"></div>
             <!-- Contenido -->
-            <div class="relative z-10 flex flex-col justify-center items-center h-full px-6">
+            <div class="relative z-10 flex flex-col justify-center items-center h-full pt-20 px-2">
                 <h1 class="text-[clamp(1.75rem,6vw,3.5rem)] md:text-[clamp(2.5rem,5vw,4rem)] font-bold text-white stroke-2">
                     Conocimiento para <span class="text-emerald-400">Todos</span>
                 </h1>

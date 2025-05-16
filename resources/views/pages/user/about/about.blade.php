@@ -14,12 +14,7 @@
 
   <div class="flex flex-col items-center px-3">
     <p class="text-center italic font-light max-w-4xl">
-      Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-      Ad mauris est parturient varius molestie condimentum eleifend sit.
-      Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-      Ad mauris est parturient varius molestie condimentum eleifend sit.
-      Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-      Ad mauris est parturient varius molestie condimentum eleifend sit.
+    ExploreDocs es un repositorio digital diseñado para investigadores, estudiantes y amantes del conocimiento. Aquí encontrarás una amplia colección de libros, tesis, papers y artículos académicos organizados para facilitar tu búsqueda. Nuestra plataforma utiliza tecnología avanzada para ofrecerte acceso rápido a información relevante y confiable.
     </p>
   </div>
 
@@ -31,10 +26,7 @@
         <div class="bg-blue-600 mx-auto md:mx-0 w-36 h-0.5"></div>
       </div>
       <p class="italic font-light text-black max-w-lg">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-        Ad mauris est parturient varius molestie condimentum eleifend sit.
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-        Ad mauris est parturient varius molestie condimentum eleifend sit.
+       Ser el repositorio digital líder en habla hispana, reconocido por su amplio catálogo, herramientas inteligentes de búsqueda y un asistente virtual que hace la exploración del conocimiento más interactiva y personalizada.
       </p>
     </div>
   </div>
@@ -47,12 +39,7 @@
         <div class="bg-blue-600 mx-auto md:mx-0 w-36 h-0.5"></div>
       </div>
       <p class="italic font-light text-black max-w-lg">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-        Ad mauris est parturient varius molestie condimentum eleifend sit.
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-        Ad mauris est parturient varius molestie condimentum eleifend sit.
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Felis eleifend nam convallis mus vehicula at.
-        Ad mauris est parturient varius molestie condimentum eleifend sit.
+      Nuestra misión es democratizar el conocimiento, rompiendo barreras de acceso a la información académica. Queremos ser el puente entre los usuarios y los recursos que necesitan, ofreciendo una experiencia intuitiva, eficiente y sin complicaciones.
       </p>
     </div>
   </div>
