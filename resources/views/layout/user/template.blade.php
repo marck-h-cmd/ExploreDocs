@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-      <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <!-- Splide CSS -->
@@ -17,12 +17,12 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-          <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
 
 <body>
 
-   <nav x-data="{ stickyMenu: false, openDropdown: null }"
+    <nav x-data="{ stickyMenu: false, openDropdown: null }"
         :class="{ 'bg-transparent opacity-0': stickyMenu, 'bg-[#1E5397] opacity-100': !stickyMenu }"
         @scroll.window="stickyMenu = (window.pageYOffset > 20); if(stickyMenu) openDropdown = null"
         @mouseenter="stickyMenu = false; openDropdown = null"
@@ -30,7 +30,7 @@
         class="transition-all duration-300 fixed top-0 w-full z-50 py-1 md:px-12" id="navbar">
         <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img class="h-12 md:h-10 my-3" src="/images/logo-v2.png" alt="Logo" />
+                <img class="h-12 md:h-12 my-3" src="/images/logo-v2.png" alt="Logo" />
             </a>
             <button data-collapse-toggle="navbar-multi-level" type="button"
                 class="text-white inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -86,46 +86,14 @@
                         </div>
                     </li>
 
-                    <!-- Dropdown Organización -->
-                    <li class="relative">
-                        <button id="dropdownNavbarLink2"
-                            class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-[#98C560] rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#98C560] md:p-0 md:w-auto {{ request()->routeIs(['direccion', 'capital_usuario', 'areas']) ? 'text-white bg-[#98C560] md:bg-transparent md:text-[#98C560]' : 'text-white bg-transparent' }}"
-                            @click="openDropdown = openDropdown === 'dropdownNavbar2' ? null : 'dropdownNavbar2'">
-                            Organización
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <div id="dropdownNavbar2" x-show="openDropdown === 'dropdownNavbar2'"
-                            class="z-10 font-normal rounded shadow w-44 bg-white absolute top-full mt-1 left-0"
-                            @click="openDropdown = openDropdown === 'dropdownNavbar2' ? null : 'dropdownNavbar2'; if(openDropdown !== 'dropdownNavbar2') openDropdown = 'dropdownNavbar2'"
-                            x-transition:enter="transition ease-out duration-200"
-                            x-transition:leave="transition ease-in duration-150">
-                            <ul class="py-2 text-sm">
-                                <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('direccion') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Dirección
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('capital_usuario') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Capital Humano
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+
 
                     <!-- Dropdown Biblioteca -->
                     <li class="relative">
                         <button id="dropdownNavbarLink3"
-                            class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-[#98C560] rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#98C560] md:p-0 md:w-auto {{ request()->routeIs(['biblioteca.papers.*', 'areas_proyectos_user', 'areas.proyectos','proyectos.show']) ? 'text-white bg-[#98C560] md:bg-transparent md:text-[#98C560]' : 'text-white bg-transparent' }}"
+                            class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-[#98C560] rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#98C560] md:p-0 md:w-auto {{ request()->routeIs(['biblioteca.papers.*', 'areas_proyectos_user', 'areas.proyectos', 'proyectos.show']) ? 'text-white bg-[#98C560] md:bg-transparent md:text-[#98C560]' : 'text-white bg-transparent' }}"
                             @click="openDropdown = openDropdown === 'dropdownNavbar3' ? null : 'dropdownNavbar3'">
-                            Biblioteca
+                            Explore
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -139,57 +107,25 @@
                             x-transition:leave="transition ease-in duration-150">
                             <ul class="py-2 text-sm">
                                 <li>
-                                    <a href="{{route('papers')}}"
+                                    <a href="{{ route('papers') }}"
                                         class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('biblioteca.papers.*') ? 'text-[#98C560]' : 'text-black' }}">
                                         Publicaciones
                                     </a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('areas_proyectos_user', 'areas.proyectos','proyectos.show') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Proyectos
+                                    <a href="{{ route('books') }}"
+                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('areas_proyectos_user', 'areas.proyectos', 'proyectos.show') ? 'text-[#98C560]' : 'text-black' }}">
+                                        Libros
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
-                    <!-- Dropdown Novedades -->
-                    <li class="relative">
-                        <button id="dropdownNavbarLink4"
-                            class="flex items-center justify-between w-full py-2 px-3 text-white hover:bg-[#98C560] rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#98C560] md:p-0 md:w-auto {{ request()->routeIs(['noticias', 'noticias.show', 'eventos', 'eventos.show']) ? 'text-white bg-[#98C560] md:bg-transparent md:text-[#98C560]' : 'text-white bg-transparent' }}"
-                            @click="openDropdown = openDropdown === 'dropdownNavbar4' ? null : 'dropdownNavbar4'">
-                            Novedades
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <div id="dropdownNavbar4" x-show="openDropdown === 'dropdownNavbar4'"
-                            class="z-10 font-normal rounded shadow w-44 bg-white absolute top-full mt-1 left-0"
-                            @click="openDropdown = openDropdown === 'dropdownNavbar4' ? null : 'dropdownNavbar4'; if(openDropdown !== 'dropdownNavbar4') openDropdown = 'dropdownNavbar4'"
-                            x-transition:enter="transition ease-out duration-200"
-                            x-transition:leave="transition ease-in duration-150">
-                            <ul class="py-2 text-sm">
-                                <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('noticias', 'noticias.show') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Noticias
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=""
-                                        class="block px-4 py-2 hover:text-[#98C560] {{ request()->routeIs('eventos', 'eventos.show') ? 'text-[#98C560]' : 'text-black' }}">
-                                        Eventos
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+
 
                     <li>
-                        <a href="{{route('contacto')}}"
+                        <a href="{{ route('contacto') }}"
                             class="text-white block py-2 px-3 rounded md:border-0 md:px-4 bg-[#98C560] w-max md:w-auto">
                             Contacto
                         </a>
@@ -233,7 +169,8 @@
                 <!-- Información de la empresa -->
                 <div class="mb-4">
                     <h5 class="text-lg font-medium mb-2">Sobre Nosotros</h5>
-                    <p class="text-sm">Somos un sitio dedicado a ofrecerte los mejores libros y publicaciones en todo el
+                    <p class="text-sm">Somos un sitio dedicado a ofrecerte los mejores libros y publicaciones en todo
+                        el
                         país.</p>
                 </div>
 
@@ -263,7 +200,8 @@
                             </a>
                         </li>
                         <li class="mb-1">
-                            <a class="text-white hover:text-gray-300 flex items-center" href="{{route('contacto')}}">
+                            <a class="text-white hover:text-gray-300 flex items-center"
+                                href="{{ route('contacto') }}">
                                 <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                     fill="currentColor">
                                     <path
@@ -362,7 +300,7 @@
     </div>
 
 
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
@@ -374,8 +312,6 @@
 
 
 <style>
-    
-
     .navbar.hidden {
         top: -100px;
     }
@@ -401,7 +337,7 @@
     }
 
     /*slidertag*/
-   
+
 
     .carousel-caption {
         font-size: 1.5vw !important;
@@ -417,7 +353,7 @@
         color: white !important;
     }
 
-   
+
 
     .homecont {
         margin-left: 65px !important;
@@ -678,37 +614,17 @@
 
 
 <script>
-    /*
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-    const hoverArea = document.querySelector('.top-hover-area');
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
-        if (currentScroll > lastScrollTop) {
-            navbar.classList.add('hidden'); // scroll hacia abajo
-        } else if (currentScroll == 0) {
-            navbar.classList.remove('hidden'); // scroll hacia arriba
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // calculo del scroll
-    });
- 
-    hoverArea.addEventListener('mouseenter', () => {
-        navbar.classList.remove('hidden'); // mostrar navbar al pasar el mouse por arriba
-    });
-    */
     document.addEventListener('DOMContentLoaded', function() {
         // Mobile menu toggle
         const navToggle = document.getElementById('nav-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         if (navToggle && mobileMenu) {
             navToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
             });
         }
-        
+
         // Mobile dropdown toggles
         const dropdownButtons = document.querySelectorAll('#mobile-menu button');
         dropdownButtons.forEach(button => {
@@ -718,41 +634,17 @@
             });
         });
     });
-    
-       window.addEventListener('load', function() {
-            const navbarHeight = document.getElementById('navbar').offsetHeight;
-            document.getElementById('main-content').style.marginTop = `${navbarHeight}px`;
-        });
 
-        // Actualizar en caso de que el tamaño de la ventana cambie
-        window.addEventListener('resize', function() {
-            const navbarHeight = document.getElementById('navbar').offsetHeight;
-            document.getElementById('main-content').style.marginTop = `${navbarHeight}px`;
-        });
-
-   /* const chatbotToggler = document.querySelector(".chatbot-toggler");
-    const closeBtn = document.querySelector(".close-btn");
-    const chatbox = document.querySelector(".chatbox");
-    const chatInput = document.querySelector(".chat-input textarea");
-    const sendChatBtn = document.querySelector(".chat-input span");
-
-
-    chatInput.addEventListener("input", () => {
-        chatInput.style.height = `${inputInitHeight}px`;
-        chatInput.style.height = `${chatInput.scrollHeight}px`;
+    window.addEventListener('load', function() {
+        const navbarHeight = document.getElementById('navbar').offsetHeight;
+        document.getElementById('main-content').style.marginTop = `${navbarHeight}px`;
     });
 
-    chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-            e.preventDefault();
-            handleChat();
-        }
+    // Actualizar en caso de que el tamaño de la ventana cambie
+    window.addEventListener('resize', function() {
+        const navbarHeight = document.getElementById('navbar').offsetHeight;
+        document.getElementById('main-content').style.marginTop = `${navbarHeight}px`;
     });
-
-    //ssendChatBtn.addEventListener("click", handleChat);
-    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot")); */
-
 
     const chatbotToggler = document.querySelector(".chatbot-toggler");
     const closeBtn = document.querySelector(".close-btn");
@@ -764,11 +656,10 @@
     const inputInitHeight = chatInput.scrollHeight;
 
     // API configuration
-    const API_KEY = ""; // Your API key here
+    const API_KEY = "{{ env('API_KEY') }}"; 
     const API_URL = `https://openrouter.ai/api/v1/chat/completions`;
     const MODEL = 'meta-llama/llama-3.3-70b-instruct:free'
     const createChatLi = (message, className) => {
-        // Create a chat <li> element with passed message and className
         const chatLi = document.createElement("li");
         chatLi.classList.add("chat", `${className}`);
         let chatContent = className === "outgoing" ? `<p></p>` :
@@ -782,7 +673,7 @@
         const messageElement = chatElement.querySelector("p");
         console.log('user', userMessage)
 
-        // Define the properties and message for the API request
+
         const requestOptions = {
             method: "POST",
             headers: {
@@ -791,25 +682,25 @@
             },
             body: JSON.stringify({
                 model: MODEL,
-                messages: [
-                    {
-                        system:"Tu nombre es mackodes, un asistente virtual de la pagina repositorio exploreDoc, que es una pagina de libros,tesis, papers"
-
+                messages: [{
+                        role: 'system',
+                        content: "Tu nombre es mackodes, un asistente virtual de la pagina repositorio ExploreDocs, que es una pagina de libros,tesis, papers, Brindas Información de lo que trata y tus mensajes son medio cortos y consisos",
                     },
                     {
-                    role: "user",
-                    content: userMessage,
-                }, ],
+                        role: "user",
+                        content: userMessage,
+                    },
+                ],
             }),
         };
 
-        // Send POST request to API, get response and set the reponse as paragraph text
+
         try {
             const response = await fetch(API_URL, requestOptions);
             const data = await response.json();
             if (!response.ok) throw new Error(data.error.message);
 
-            
+
             messageElement.textContent = data.choices[0].message.content;
         } catch (error) {
             messageElement.classList.add("error");
@@ -830,8 +721,8 @@
         chatbox.scrollTo(0, chatbox.scrollHeight);
 
         setTimeout(() => {
-            // Display "Thinking..." message while waiting for the response
-            const incomingChatLi = createChatLi("Thinking...", "incoming");
+
+            const incomingChatLi = createChatLi("Pensando...", "incoming");
             chatbox.appendChild(incomingChatLi);
             chatbox.scrollTo(0, chatbox.scrollHeight);
             generateResponse(incomingChatLi);
@@ -839,7 +730,7 @@
     };
 
     chatInput.addEventListener("input", () => {
-        // Adjust the height of the input textarea based on its content
+
         chatInput.style.height = `${inputInitHeight}px`;
         chatInput.style.height = `${chatInput.scrollHeight}px`;
     });
@@ -853,5 +744,5 @@
 
     sendChatBtn.addEventListener("click", handleChat);
     closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));  
+    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 </script>
