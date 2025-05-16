@@ -1,63 +1,43 @@
 @props([
-'date' => '',
-'month' => '',
-'title' => '',
-'location' => '',
+'date',
+'month',
+'title',
+'location',
 'registerUrl' => '#',
 'moreUrl' => '#',
 'registerBtnText' => 'Registrar',
 'moreBtnText' => 'Más info',
-'registerBtnColor' => 'btn-outline-primary',
-'moreBtnColor' => 'btn-outline-secondary',
 'registerBtnIcon' => null,
 'moreBtnIcon' => null,
-'cardClass' => 'shadow-sm h-100',
-'footerClass' => 'bg-transparent border-top-0 text-center',
-'dateSize' => 'fs-4',
-'dateColor' => 'text-primary'
 ])
 
-<div class="col">
-    <div class="card {{ $cardClass }} rounded-xl overflow-hidden transition-shadow hover:shadow-md">
-        <div class="card-body">
-            <div class="d-flex align-items-center gap-3 mb-3">
-                @if($date || $month)
-                <div class="text-center me-2">
-                    @if($date)
-                    <div class="fw-bold {{ $dateSize }} {{ $dateColor }} tracking-wide">{{ $date }}</div>
-                    @endif
-                    @if($month)
-                    <div class="text-uppercase small text-muted">{{ $month }}</div>
-                    @endif
-                </div>
-                @endif
+<div class="w-full max-w-md px-2 h-full">
+    <div class="bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-300 flex flex-col h-full">
 
+        <div class="p-4 flex flex-col flex-grow">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="text-center">
+                    <div class="text-2xl font-extrabold text-blue-600 leading-tight">{{ $date }}</div>
+                    <div class="uppercase text-xs text-gray-500 tracking-wide">{{ $month }}</div>
+                </div>
                 <div>
-                    @if($title)
-                    <h5 class="card-title mb-1 font-semibold text-lg">{{ $title }}</h5>
-                    @endif
-                    @if($location)
-                    <p class="mb-0 small text-gray-700">{{ $location }}</p>
-                    @endif
+                    <h5 class="text-base font-semibold text-gray-800 leading-tight">{{ $title }}</h5>
+                    <p class="text-sm text-gray-600 mt-1">{{ $location }}</p>
                 </div>
+            </div>
+
+            {{-- Flex-1 no es necesario aquí; usamos mt-auto en el footer --}}
+            <div class="mt-auto pt-4 flex gap-2">
+                <a href="{{ $registerUrl }}"
+                    class="flex-1 inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 transition">
+                    {!! $registerBtnIcon ?? '' !!} {{ $registerBtnText }}
+                </a>
+                <a href="{{ $moreUrl }}"
+                    class="flex-1 inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition">
+                    {!! $moreBtnIcon ?? '' !!} {{ $moreBtnText }}
+                </a>
             </div>
         </div>
 
-        <div class="card-footer {{ $footerClass }}">
-            <div class="d-flex justify-content-center gap-2">
-                <x-button
-                    :href="$registerUrl"
-                    :text="$registerBtnText"
-                    :color="$registerBtnColor"
-                    :icon="$registerBtnIcon"
-                    class="btn-sm hover:scale-105 transition" />
-                <x-button
-                    :href="$moreUrl"
-                    :text="$moreBtnText"
-                    :color="$moreBtnColor"
-                    :icon="$moreBtnIcon"
-                    class="btn-sm hover:scale-105 transition" />
-            </div>
-        </div>
     </div>
 </div>
