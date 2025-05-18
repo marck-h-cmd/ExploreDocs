@@ -16,7 +16,7 @@
             "Un nuevo Amanecer",
             "Las casas",
             "Investigación sobre cambio climático",
-            "The Manu",
+            "El alquimista",
             "Los saberes"
         ];
         

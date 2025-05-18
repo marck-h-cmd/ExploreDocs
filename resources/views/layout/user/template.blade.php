@@ -142,7 +142,7 @@
     </button>
     <div class="chatbot">
         <header>
-            <h2>Chatbot</h2>
+            <h2>DeepDocs</h2>
             <span class="close-btn material-symbols-outlined">close</span>
         </header>
         <ul class="chatbox">
@@ -631,7 +631,7 @@
                 model: MODEL,
                 messages: [{
                         role: 'system',
-                        content: "Tu nombre es DeepDocs, un asistente virtual de la pagina repositorio ExploreDocs, que es una pagina de libros,tesis, papers, Brindas Información de lo que trata y tus mensajes son medio cortos y consisos y das sugerencias de libros a veces",
+                        content: "Tu nombre es DeepDocs, un asistente virtual de la pagina repositorio ExploreDocs, que es una pagina donde se encuentra libros,tesis, papers, Brindas Información de lo que trata y tus mensajes son medio cortos y consisos y das sugerencias de libros a veces (max-3), no mencionas el mismo libro siempre. Libros que hay:  Convocatorias del Paraiso,Un nuevo Amanecer, Las casas, Investigación sobre cambio climático, El alquimista,Los saberes",
                     },
                     {
                         role: "user",

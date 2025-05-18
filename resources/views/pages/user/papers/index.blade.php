@@ -183,7 +183,7 @@
                                 </li>
                                 <hr>
                                 <li>
-                                    <a href=""
+                                    <a href="{{route('contacto')}}"
                                         class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
                                         <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  group-hover:text-gray-900 "
                                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +252,7 @@
                                         <a href=""
                                             class=" cursor-pointer hover:underline max-md:text-center relative group ">
                                             <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
-                                                jfkjd fkdkfkdk </h3>
+                                               Titulo 1 </h3>
                                             <!-- Titulo flotante completo -->
                                             <div
                                                 class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
@@ -263,7 +263,7 @@
                                         <div class="mt-5">
                                             <p class="text-gray-600 ">Autores:</p>
                                             <p class="autores italic text-base mb-3">
-                                                Felix, Manuel</p>
+                                                Carlos</p>
                                         </div>
                                         <p class="doi mt-3"><span class="text-gray-600">
                                                 Publisher: </span><span
@@ -311,7 +311,7 @@
                                         <a href=""
                                             class=" cursor-pointer hover:underline max-md:text-center relative group ">
                                             <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
-                                                jfkjd fkdkfkdk </h3>
+                                               Titulo 2</h3>
                                             <!-- Titulo flotante completo -->
                                             <div
                                                 class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
@@ -322,67 +322,7 @@
                                         <div class="mt-5">
                                             <p class="text-gray-600 ">Autores:</p>
                                             <p class="autores italic text-base mb-3">
-                                                Felix, Manuel</p>
-                                        </div>
-                                        <p class="doi mt-3"><span class="text-gray-600">
-                                                Publisher: </span><span
-                                                class="doi-link  text-gray-500 text-base">Alexis</span>
-                                        </p>
-                                        <p class="text-base  mt-3">
-                                            <span class="text-gray-600  ">Publicado: </span>
-                                            <strong class="text-gray-700 uppercase font-semibold text-sm ">
-                                                28-06-25 </strong>
-                                        </p>
-                                        <a href="" class="mt-2 flex gap-2 cursor-pointer font-bold">
-                                            <svg width="24px" height="24px" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                    stroke-linejoin="round"></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <path fill="#98c560" fill-rule="evenodd"
-                                                        d="M8 3.517a1 1 0 011.62-.784l5.348 4.233a1 1 0 010 1.568l-5.347 4.233A1 1 0 018 11.983v-1.545c-.76-.043-1.484.003-2.254.218-.994.279-2.118.857-3.506 1.99a.993.993 0 01-1.129.096.962.962 0 01-.445-1.099c.415-1.5 1.425-3.141 2.808-4.412C4.69 6.114 6.244 5.241 8 5.042V3.517zm1.5 1.034v1.2a.75.75 0 01-.75.75c-1.586 0-3.066.738-4.261 1.835a8.996 8.996 0 00-1.635 2.014c.878-.552 1.695-.916 2.488-1.138 1.247-.35 2.377-.33 3.49-.207a.75.75 0 01.668.745v1.2l4.042-3.2L9.5 4.55z"
-                                                        clip-rule="evenodd"></path>
-                                                </g>
-                                            </svg>
-                                            <p class=" text-[#98c560] text-base">Redirigir</p>
-                                        </a>
-                                    </div>
-                                    <div class="w-full p-6 max-md:py-2 text-gray-800 flex flex-col justify-between  ">
-                                        <p class="mt-4  text-justify text-gray-500 text-sm ">
-                                            es un término, generalmente de origen anglosajón, que se usa para referirse a un
-                                            artículo científico, un trabajo de investigación o una publicación académica.
-                                            Normalmente, este tipo de texto tiene como objetivo presentar los resultados de
-                                            una investigación teórica o empírica, y está destinado a ser publicado en
-                                            revistas especializadas
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                                <div
-                                    class="flex flex-col md:flex-row overflow-hidden relative                                          rounded-lg shadow-xl   mt-4  mx-2  bg-[#f4f4f4] max-w-6xl py-2 h-auto">
-
-                                    <p
-                                        class="absolute right-6 px-2 md:top-2   font-semibold bg-gray-200 p-1 text-gray-600 rounded-lg text-sm">
-                                        Todas</p>
-                                    <!-- información del paper -->
-                                    <div class="max-h-96 max-w-[400px]   md:w-1/2 p-4">
-                                        <a href=""
-                                            class=" cursor-pointer hover:underline max-md:text-center relative group ">
-                                            <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
-                                                jfkjd fkdkfkdk </h3>
-                                            <!-- Titulo flotante completo -->
-                                            <div
-                                                class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-                                                Sample
-                                            </div>
-
-                                        </a>
-                                        <div class="mt-5">
-                                            <p class="text-gray-600 ">Autores:</p>
-                                            <p class="autores italic text-base mb-3">
-                                                Felix, Manuel</p>
+                                                Ricardo</p>
                                         </div>
                                         <p class="doi mt-3"><span class="text-gray-600">
                                                 Publisher: </span><span
@@ -431,7 +371,67 @@
                                         <a href=""
                                             class=" cursor-pointer hover:underline max-md:text-center relative group ">
                                             <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
-                                                jfkjd fkdkfkdk </h3>
+                                                La anatomia </h3>
+                                            <!-- Titulo flotante completo -->
+                                            <div
+                                                class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                                                Sample
+                                            </div>
+
+                                        </a>
+                                        <div class="mt-5">
+                                            <p class="text-gray-600 ">Autores:</p>
+                                            <p class="autores italic text-base mb-3">
+                                                Felix</p>
+                                        </div>
+                                        <p class="doi mt-3"><span class="text-gray-600">
+                                                Publisher: </span><span
+                                                class="doi-link  text-gray-500 text-base">Alexis</span>
+                                        </p>
+                                        <p class="text-base  mt-3">
+                                            <span class="text-gray-600  ">Publicado: </span>
+                                            <strong class="text-gray-700 uppercase font-semibold text-sm ">
+                                                28-06-25 </strong>
+                                        </p>
+                                        <a href="" class="mt-2 flex gap-2 cursor-pointer font-bold">
+                                            <svg width="24px" height="24px" viewBox="0 0 16 16"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path fill="#98c560" fill-rule="evenodd"
+                                                        d="M8 3.517a1 1 0 011.62-.784l5.348 4.233a1 1 0 010 1.568l-5.347 4.233A1 1 0 018 11.983v-1.545c-.76-.043-1.484.003-2.254.218-.994.279-2.118.857-3.506 1.99a.993.993 0 01-1.129.096.962.962 0 01-.445-1.099c.415-1.5 1.425-3.141 2.808-4.412C4.69 6.114 6.244 5.241 8 5.042V3.517zm1.5 1.034v1.2a.75.75 0 01-.75.75c-1.586 0-3.066.738-4.261 1.835a8.996 8.996 0 00-1.635 2.014c.878-.552 1.695-.916 2.488-1.138 1.247-.35 2.377-.33 3.49-.207a.75.75 0 01.668.745v1.2l4.042-3.2L9.5 4.55z"
+                                                        clip-rule="evenodd"></path>
+                                                </g>
+                                            </svg>
+                                            <p class=" text-[#98c560] text-base">Redirigir</p>
+                                        </a>
+                                    </div>
+                                    <div class="w-full p-6 max-md:py-2 text-gray-800 flex flex-col justify-between  ">
+                                        <p class="mt-4  text-justify text-gray-500 text-sm ">
+                                            es un término, generalmente de origen anglosajón, que se usa para referirse a un
+                                            artículo científico, un trabajo de investigación o una publicación académica.
+                                            Normalmente, este tipo de texto tiene como objetivo presentar los resultados de
+                                            una investigación teórica o empírica, y está destinado a ser publicado en
+                                            revistas especializadas
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div
+                                    class="flex flex-col md:flex-row overflow-hidden relative                                          rounded-lg shadow-xl   mt-4  mx-2  bg-[#f4f4f4] max-w-6xl py-2 h-auto">
+
+                                    <p
+                                        class="absolute right-6 px-2 md:top-2   font-semibold bg-gray-200 p-1 text-gray-600 rounded-lg text-sm">
+                                        Todas</p>
+                                    <!-- información del paper -->
+                                    <div class="max-h-96 max-w-[400px]   md:w-1/2 p-4">
+                                        <a href=""
+                                            class=" cursor-pointer hover:underline max-md:text-center relative group ">
+                                            <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
+                                               La sociedad  </h3>
                                             <!-- Titulo flotante completo -->
                                             <div
                                                 class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
@@ -491,7 +491,7 @@
                                         <a href=""
                                             class=" cursor-pointer hover:underline max-md:text-center relative group ">
                                             <h3 class="font-semibold text-lg mt-4 text-blue-400 text-justify ">
-                                                jfkjd fkdkfkdk </h3>
+                                                La investigación cientifica </h3>
                                             <!-- Titulo flotante completo -->
                                             <div
                                                 class="absolute z-30 left-0 mb-3 w-max max-w-xs bg-white text-black text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
@@ -502,7 +502,7 @@
                                         <div class="mt-5">
                                             <p class="text-gray-600 ">Autores:</p>
                                             <p class="autores italic text-base mb-3">
-                                                Felix, Manuel</p>
+                                                 Manuel</p>
                                         </div>
                                         <p class="doi mt-3"><span class="text-gray-600">
                                                 Publisher: </span><span
@@ -548,12 +548,7 @@
                         </div>
                     </div>
                     <!-- BOTON DE VER MÁS PUBLICACIONES -->
-                    <div class="flex justify-center mt-5 p-6 ">
-                        <button id="load-more"
-                            class="bg-[#98c560]  text-white text-lg font-bold py-3 px-6 rounded-lg hover:bg-[#66b308] transition-all duration-300">
-                            VER MÁS PUBLICACIONES
-                        </button>
-                    </div>
+                  
                     <div class="mt-4 px-4" id="pagination-links">
 
                     </div>

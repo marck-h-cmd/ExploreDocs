@@ -197,12 +197,7 @@
 
             </div>
 
-            <div class="mt-10 flex justify-center">
-                <a href="{{ route('noticias') }}"
-                    class="bg-[#98C560] p-4 rounded-xl text-lg text-white hover:bg-[#a6d073] cursor-pointer">
-                    VER MÁS NOTICIAS
-                </a>
-            </div>
+           
         </section>
 
     </div>

@@ -16,6 +16,18 @@
         document.getElementById('popup').remove();
     }
 </script>
+@elseif(session('error'))
+<div id="popup" class="fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <h3 class="text-lg font-bold mb-4">{{ session('error') }}</h3>
+        <button onclick="closePopup()" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-green-600">Aceptar</button>
+    </div>
+</div>
+<script>
+    function closePopup() {
+        document.getElementById('popup').remove();
+    }
+</script>
 @endif
 
     <!-- CONTACTO -->
